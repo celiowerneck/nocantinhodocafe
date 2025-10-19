@@ -1,0 +1,103 @@
+:root {
+  --bg: #2A211B;
+  --card: #3A2F28;
+  --text: #F5EBDD;
+  --accent: #D5BFA2;
+  --border: #4C3E36;
+  --subtle: #C3B299;
+}
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Lora', serif;
+  margin: 0;
+  line-height: 1.75;
+}
+header {
+  text-align: center;
+  padding: 4rem 1rem 2rem;
+}
+.logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+.cup-icon {
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--accent);
+  border-radius: 4px 4px 12px 12px;
+  position: relative;
+  background: linear-gradient(to bottom, #3A2F28 50%, #2A211B 50%);
+}
+.cup-icon::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 12px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  border-bottom: none;
+  border-left: none;
+  transform: rotate(45deg);
+}
+.steam {
+  position: absolute;
+  top: -18px;
+  left: 15px;
+  width: 8px;
+  height: 18px;
+  border-left: 2px solid rgba(213,191,162,0.5);
+  border-radius: 50%;
+  animation: steamUp 3s ease-in-out infinite;
+}
+@keyframes steamUp {
+  0% { transform: translateY(0) scaleY(1); opacity: 1; }
+  100% { transform: translateY(-20px) scaleY(0.8); opacity: 0; }
+}
+nav {
+  text-align: center;
+  margin-bottom: 2.2rem;
+}
+nav a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0 1rem;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease;
+}
+nav a:hover { border-color: var(--accent); }
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 0 3rem 3rem;
+}
+section {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease;
+}
+section:hover { transform: translateY(-4px); }
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  color: var(--accent);
+}
+footer {
+  text-align: center;
+  padding: 2rem;
+  border-top: 1px solid var(--border);
+  color: var(--subtle);
+  font-size: 0.95rem;
+}
+@media (max-width: 900px) {
+  main { grid-template-columns: 1fr; padding: 0 1.5rem 3rem; }
+}
