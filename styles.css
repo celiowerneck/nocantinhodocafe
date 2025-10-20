@@ -101,3 +101,33 @@ footer {
 @media (max-width: 900px) {
   main { grid-template-columns: 1fr; padding: 0 1.5rem 3rem; }
 }
+.hero-banner {
+  background-image: url('IMG/banner-cafe.jpg'); /* use o nome do arquivo real */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.hero-banner .overlay {
+  background: rgba(0, 0, 0, 0.45);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.hero-banner h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-banner p {
+  font-size: 1.2rem;
+  font-style: italic;
+}
