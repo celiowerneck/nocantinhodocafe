@@ -1,18 +1,3 @@
-:root{
-  /* coloque aqui a largura NATIVA do banner.
-     Se seu banner for 1600px de largura, deixe 1600px.
-     Se for 1920px, mude para 1920px. */
-  --page-max: 1600px;
-}
-
-/* centraliza e limita toda a página à largura do banner */
-html, body { margin:0; padding:0; }
-body{
-  max-width: var(--page-max);
-  margin: 0 auto;           /* centraliza */
-  overflow-x: hidden;       /* garante zero rolagem lateral */
-}
-
 :root {
   --bg: #2A211B;
   --card: #3A2F28;
