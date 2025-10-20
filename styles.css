@@ -60,14 +60,14 @@ header p {
 /* === MENU DENTRO DO BANNER === */
 nav {
   position: absolute;
-  bottom: 15px; /* dentro do banner */
+  bottom: 15px;           /* empurra o menu para dentro do banner */
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(20, 20, 20, 0.45); /* translúcido e sutil */
+  background: rgba(20, 20, 20, 0.45); /* fundo translúcido para contraste */
   padding: 10px 25px;
   border-radius: 12px;
-  z-index: 3;
-  backdrop-filter: blur(4px);
+  z-index: 3;             /* garante que o menu fique sobre a imagem */
+  backdrop-filter: blur(4px); /* sutil efeito de desfoque de fundo */
 }
 
 nav a {
