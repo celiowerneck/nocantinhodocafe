@@ -18,12 +18,16 @@ body {
 /* === TOPO / HERO === */
 header {
   position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;              /* usa toda a largura da viewport */
   background-image: url('IMG/banner-cafe.jpg');
-  background-size: cover;       /* cobre toda a largura */
+  background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
-  width: 100vw;                 /* ocupa toda a largura da tela */
-  height: 300px;                /* faixa um pouco mais fina */
+  height: 320px;
   display: flex;
   flex-direction: column;
   align-items: center;
