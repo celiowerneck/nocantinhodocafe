@@ -60,26 +60,25 @@ header p {
 /* === MENU DENTRO DO BANNER === */
 nav {
   position: absolute;
-  bottom: 15px;           /* empurra o menu para dentro do banner */
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(20, 20, 20, 0.45); /* fundo translúcido para contraste */
-  padding: 10px 25px;
-  border-radius: 12px;
-  z-index: 3;             /* garante que o menu fique sobre a imagem */
-  backdrop-filter: blur(4px); /* sutil efeito de desfoque de fundo */
+  bottom: 20px; /* coloca o menu na parte inferior do banner */
+  width: 100%;
+  text-align: center;
+  z-index: 2;
 }
 
 nav a {
-  color: #F8EFD4;
+  color: var(--accent);
   text-decoration: none;
   font-weight: 600;
   margin: 0 1rem;
-  transition: color 0.3s ease;
+  padding: 0.4rem 0.8rem;
+  background: rgba(0, 0, 0, 0.4); /* fundo translúcido sutil */
+  border-radius: 6px;
+  transition: background 0.3s ease;
 }
 
 nav a:hover {
-  color: var(--accent);
+  background: rgba(0, 0, 0, 0.6);
 }
 
 /* === CONTEÚDO === */
