@@ -180,5 +180,57 @@ html, body {
   width: 100%;
   overflow-x: hidden; /* evita qualquer barra de rolagem lateral */
 }
+/* === LIVROS / RESENHAS === */
+.conteudo-livros {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 2rem;
+}
+
+.resenha {
+  display: flex;
+  gap: 2rem;
+  max-width: 1000px;
+  align-items: flex-start;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+}
+
+.capa-livro {
+  width: 280px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.texto-resenha {
+  flex: 1;
+  color: var(--text);
+}
+
+.texto-resenha h2 {
+  font-family: 'Playfair Display', serif;
+  color: var(--accent);
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.botao-comprar {
+  display: inline-block;
+  background: var(--accent);
+  color: #2A211B;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 1rem;
+  transition: background 0.3s ease;
+}
+
+.botao-comprar:hover {
+  background: #e8d18a;
+}
 
 
