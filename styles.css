@@ -131,3 +131,45 @@ footer {
   font-size: 1.2rem;
   font-style: italic;
 }
+/* === HERO BANNER === */
+header {
+  position: relative;
+  background-image: url('IMG/banner-cafe.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  overflow: hidden;
+}
+
+/* Camada escurecida para melhor contraste do texto */
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: brightness(0.9);
+  z-index: 1;
+}
+
+/* Conteúdo acima da camada */
+header .logo,
+header p {
+  position: relative;
+  z-index: 2;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Efeito de fade-in suave */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
