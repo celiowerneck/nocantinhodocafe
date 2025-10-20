@@ -1,3 +1,18 @@
+:root{
+  /* coloque aqui a largura NATIVA do banner.
+     Se seu banner for 1600px de largura, deixe 1600px.
+     Se for 1920px, mude para 1920px. */
+  --page-max: 1600px;
+}
+
+/* centraliza e limita toda a página à largura do banner */
+html, body { margin:0; padding:0; }
+body{
+  max-width: var(--page-max);
+  margin: 0 auto;           /* centraliza */
+  overflow-x: hidden;       /* garante zero rolagem lateral */
+}
+
 :root {
   --bg: #2A211B;
   --card: #3A2F28;
@@ -16,18 +31,11 @@ body {
 }
 
 /* === TOPO / HERO === */
-header {
+header{
   position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  width: 100vw;              /* usa toda a largura da viewport */
-  background-image: url('IMG/banner-cafe.jpg');
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
-  height: 320px;
+  width: 100%;              /* ocupa 100% da largura da página (que está limitada) */
+  height: 320px;            /* ajuste fino da “faixa” */
+  background: url('IMG/banner-cafe.jpg') center top / cover no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
