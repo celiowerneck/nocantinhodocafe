@@ -19,7 +19,7 @@ body {
 header {
   position: relative;
   background: url('IMG/banner-cafe.jpg') center/cover no-repeat;
-  height: 260px; /* mais fino */
+  height: 285px; /* antes 260px — ~10% maior */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,7 +27,7 @@ header {
   text-align: center;
   color: #fff;
   font-family: 'Playfair Display', serif;
-  padding-bottom: 40px;
+  padding-bottom: 60px; /* mais espaço pro menu */
   overflow: hidden;
 }
 
@@ -57,16 +57,17 @@ header p {
   color: #f0f0e6;
 }
 
-/* === MENU === */
+/* === MENU DENTRO DO BANNER === */
 nav {
   position: absolute;
-  bottom: 0;
+  bottom: 15px; /* dentro do banner */
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(20, 20, 20, 0.5);
+  background: rgba(20, 20, 20, 0.45); /* translúcido e sutil */
   padding: 10px 25px;
-  border-radius: 12px 12px 0 0;
+  border-radius: 12px;
   z-index: 3;
+  backdrop-filter: blur(4px);
 }
 
 nav a {
@@ -77,7 +78,9 @@ nav a {
   transition: color 0.3s ease;
 }
 
-nav a:hover { color: var(--accent); }
+nav a:hover {
+  color: var(--accent);
+}
 
 /* === CONTEÚDO === */
 main {
