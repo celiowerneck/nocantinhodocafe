@@ -2,10 +2,11 @@
   --bg: #2A211B;
   --card: #3A2F28;
   --text: #F5EBDD;
-  --accent: #D5BFA2;
+  --accent: #D9A744; /* amarelo suave para o título */
   --border: #4C3E36;
   --subtle: #C3B299;
 }
+
 body {
   background-color: var(--bg);
   color: var(--text);
@@ -13,16 +14,104 @@ body {
   margin: 0;
   line-height: 1.75;
 }
+
+/* === TOPO / HERO === */
 header {
+  position: relative;
+  background: url('IMG/banner-cafe.jpg') center/cover no-repeat;
+  height: 260px; /* mais fino */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
   text-align: center;
-  padding: 4rem 1rem 2rem;
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+  padding-bottom: 40px;
+  overflow: hidden;
 }
+
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35); /* escurecimento leve */
+  z-index: 1;
+}
+
+header h1 {
+  position: relative;
+  z-index: 2;
+  font-size: 2.8rem;
+  color: var(--accent);
+  letter-spacing: 1px;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+header p {
+  position: relative;
+  z-index: 2;
+  font-style: italic;
+  margin-top: 10px;
+  color: #f0f0e6;
+}
+
+/* === MENU === */
+nav {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(20, 20, 20, 0.5);
+  padding: 10px 25px;
+  border-radius: 12px 12px 0 0;
+  z-index: 3;
+}
+
+nav a {
+  color: #F8EFD4;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0 1rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover { color: var(--accent); }
+
+/* === CONTEÚDO === */
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 0 3rem 3rem;
+}
+
+section {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease;
+}
+
+section:hover { transform: translateY(-4px); }
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  color: var(--accent);
+}
+
+/* === ÍCONE XÍCARA === */
 .logo {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.6rem;
 }
+
 .cup-icon {
   width: 40px;
   height: 40px;
@@ -31,6 +120,7 @@ header {
   position: relative;
   background: linear-gradient(to bottom, #3A2F28 50%, #2A211B 50%);
 }
+
 .cup-icon::before {
   content: '';
   position: absolute;
@@ -44,6 +134,7 @@ header {
   border-left: none;
   transform: rotate(45deg);
 }
+
 .steam {
   position: absolute;
   top: -18px;
@@ -54,43 +145,13 @@ header {
   border-radius: 50%;
   animation: steamUp 3s ease-in-out infinite;
 }
+
 @keyframes steamUp {
   0% { transform: translateY(0) scaleY(1); opacity: 1; }
   100% { transform: translateY(-20px) scaleY(0.8); opacity: 0; }
 }
-nav {
-  text-align: center;
-  margin-bottom: 2.2rem;
-}
-nav a {
-  color: var(--accent);
-  text-decoration: none;
-  font-weight: 600;
-  margin: 0 1rem;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.3s ease;
-}
-nav a:hover { border-color: var(--accent); }
-main {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  padding: 0 3rem 3rem;
-}
-section {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.25);
-  transition: transform 0.3s ease;
-}
-section:hover { transform: translateY(-4px); }
-h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.4rem;
-  color: var(--accent);
-}
+
+/* === RODAPÉ === */
 footer {
   text-align: center;
   padding: 2rem;
@@ -98,78 +159,18 @@ footer {
   color: var(--subtle);
   font-size: 0.95rem;
 }
+
+/* === RESPONSIVO === */
 @media (max-width: 900px) {
-  main { grid-template-columns: 1fr; padding: 0 1.5rem 3rem; }
-}
-.hero-banner {
-  background-image: url('IMG/banner-cafe.jpg'); /* use o nome do arquivo real */
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  height: 380px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #fff;
-  position: relative;
+  main {
+    grid-template-columns: 1fr;
+    padding: 0 1.5rem 3rem;
+  }
+  header {
+    height: 220px;
+    padding-bottom: 30px;
+  }
+  header h1 { font-size: 2rem; }
 }
 
-.hero-banner .overlay {
-  background: rgba(0, 0, 0, 0.45);
-  padding: 2rem;
-  border-radius: 8px;
-}
-
-.hero-banner h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.4rem;
-  margin-bottom: 0.5rem;
-}
-
-.hero-banner p {
-  font-size: 1.2rem;
-  font-style: italic;
-}
-/* === HERO BANNER === */
-header {
-  position: relative;
-  background-image: url('IMG/banner-cafe.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 380px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  text-align: center;
-  font-family: 'Playfair Display', serif;
-  overflow: hidden;
-}
-
-/* Camada escurecida para melhor contraste do texto */
-header::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-  backdrop-filter: brightness(0.9);
-  z-index: 1;
-}
-
-/* Conteúdo acima da camada */
-header .logo,
-header p {
-  position: relative;
-  z-index: 2;
-  animation: fadeIn 2s ease-in-out;
-}
-
-/* Efeito de fade-in suave */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
 
