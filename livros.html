@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Livros | No Cantinho do Café</title>
-  <meta name="description" content="Resenha do livro Win Bigly – Scott Adams. Reflexões sobre persuasão, narrativa e percepção no mundo moderno.">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Lora&display=swap" rel="stylesheet">
+  <meta name="description" content="Resenhas e indicações de livros — No Cantinho do Café. Um espaço para refletir entre aroma, palavra e pausa." />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Lora&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -19,39 +19,51 @@
 
     <nav>
       <a href="index.html">Início</a>
-      <a href="livros.html">Livros</a>
+      <a href="livros.html" class="ativo">Livros</a>
       <a href="cafes.html">Cafés</a>
       <a href="sobre.html">Sobre</a>
       <a href="contato.html">Contato</a>
     </nav>
   </header>
 
-  <main class="conteudo-livros">
-    <section class="resenha">
-      <img src="IMG/win-bigly.jpg" alt="Capa do livro Win Bigly – Scott Adams" class="capa-livro">
+  <main class="catalogo-livros">
+    <h2>Livros & Resenhas</h2>
+    <p class="intro">
+      Aqui no Cantinho do Café, cada livro é um convite à pausa e à reflexão.
+      Explore nossas resenhas e descubra histórias, ideias e autores que inspiram.
+    </p>
 
-      <div class="texto-resenha">
-        <h2><em>Win Bigly – Persuasion in a World Where Facts Don’t Matter</em></h2>
-        <p><strong>Autor:</strong> Scott Adams</p>
+    <section class="lista-livros">
 
-        <p>
-          Em <em>Win Bigly</em>, Scott Adams — criador de <em>Dilbert</em> — explora como a persuasão molda nossas crenças muito mais do que a lógica ou os fatos. 
-          O livro mergulha nas técnicas de influência utilizadas em campanhas políticas e no cotidiano, revelando como a emoção, o enquadramento e a repetição 
-          podem redefinir percepções e construir narrativas poderosas.
-        </p>
+      <!-- CARD 1 – Win Bigly -->
+      <article class="card-livro">
+        <img src="IMG/win-bigly.jpg" alt="Capa do livro Win Bigly – Scott Adams" class="capa-livro" loading="lazy">
+        <div class="texto-card">
+          <h3><em>Win Bigly</em></h3>
+          <p><strong>Autor:</strong> Scott Adams</p>
+          <p>
+            Um olhar provocativo sobre o poder da persuasão e como emoções e narrativas moldam nossas crenças
+            mais do que os fatos.
+          </p>
+          <a href="reviews/win-bigly.html" class="ler-mais">Ler resenha completa →</a>
+        </div>
+      </article>
 
-        <p>
-          Adams mostra que, em um mundo saturado de informação, o poder está nas mãos de quem consegue capturar atenção e emoção. 
-          A leitura é provocativa, especialmente por unir psicologia cognitiva e análise prática de comunicação — um lembrete de que compreender a mente humana 
-          é essencial para quem deseja argumentar com clareza ou inspirar mudança.
-        </p>
+      <!-- Exemplo de próximo livro futuro -->
+      <!--
+      <article class="card-livro">
+        <img src="IMG/poder-do-habito.jpg" alt="Capa do livro O Poder do Hábito – Charles Duhigg" class="capa-livro" loading="lazy">
+        <div class="texto-card">
+          <h3><em>O Poder do Hábito</em></h3>
+          <p><strong>Autor:</strong> Charles Duhigg</p>
+          <p>
+            Um mergulho fascinante em como os hábitos se formam e podem ser transformados para mudar a vida e o trabalho.
+          </p>
+          <a href="reviews/poder-do-habito.html" class="ler-mais">Ler resenha completa →</a>
+        </div>
+      </article>
+      -->
 
-        <p>
-          <strong>Para quem é:</strong> comunicadores, empreendedores, profissionais de marketing e qualquer leitor curioso sobre o poder invisível das palavras.
-        </p>
-
-        <a href="https://www.amazon.com.br/dp/B0DJFJGJWW?tag=plantasegatos-20" target="_blank" class="botao-comprar">Comprar na Amazon</a>
-      </div>
     </section>
   </main>
 
@@ -60,4 +72,5 @@
   </footer>
 </body>
 </html>
+
 
