@@ -586,6 +586,19 @@ h2 {
 .feed-posts .lermais:hover {
   background: #e8d18a;
 }
+/* Centraliza título e texto introdutório da página de livros */
+h2 {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 2rem;
+}
+
+.intro-livros {
+  text-align: center;
+  max-width: 900px;
+  margin: 10px auto 40px auto; /* centraliza horizontalmente */
+  line-height: 1.6;
+}
 
 
 
