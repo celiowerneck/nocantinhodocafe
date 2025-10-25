@@ -21,6 +21,9 @@ header {
   width: 100%;
   height: 320px; /* ajuste fino da faixa */
   background: url("IMG/Cabecalho-novo.jpg") center -660px / cover no-repeat fixed;
+  background-attachment: fixed; /* garante que a imagem fique presa à janela */
+  background-position: center -760px; /* mantém o enquadramento exato */
+  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
