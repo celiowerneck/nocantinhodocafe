@@ -22,7 +22,7 @@ header {
   height: 320px;
   background: url("IMG/Cabecalho-novo.jpg") center -660px / cover no-repeat;
   background-attachment: scroll; /* comportamento dinâmico, acompanha o movimento */
-  background-position: center -660px;
+  background-position: center -760px;
   background-size: cover; /* mantém proporções originais */
   display: flex;
   flex-direction: column;
