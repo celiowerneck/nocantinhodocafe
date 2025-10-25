@@ -232,5 +232,87 @@ html, body {
 .botao-comprar:hover {
   background: #e8d18a;
 }
+/* === FEED DE POSTS / BLOG === */
+.feed-posts {
+  grid-column: 1 / -1; /* ocupa toda a largura do grid principal */
+  background: var(--card);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.feed-posts h2 {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  color: var(--accent);
+  margin-bottom: 2rem;
+}
+
+.post {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: var(--bg);
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  padding: 1.2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.post img.thumb {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.25);
+}
+
+.post .conteudo h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: var(--accent);
+  margin: 0 0 0.4rem;
+}
+
+.post .conteudo p {
+  margin: 0 0 0.8rem;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.lermais {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.lermais:hover {
+  text-decoration: underline;
+}
+
+/* Responsivo */
+@media (max-width: 800px) {
+  .post {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .post img.thumb {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px 8px 0 0;
+  }
+}
+
 
 
