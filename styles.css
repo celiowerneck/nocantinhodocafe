@@ -505,6 +505,15 @@ blockquote {
 .ler-mais:hover {
   background: #e8d18a;
 }
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;               /* Aumenta o tamanho */
+  color: var(--accent);          /* Mantém o tom dourado */
+  text-align: center;            /* Centraliza */
+  margin: 2rem auto 1rem;        /* Dá respiro antes e depois */
+  letter-spacing: 0.5px;         /* Pequeno refinamento tipográfico */
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4); /* Leve profundidade */
+}
 
 
 
