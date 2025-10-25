@@ -50,43 +50,51 @@
       <p>
         Notas de caramelo, castanha e chocolate ao leite. Doçura equilibrada e aroma convidativo — ideal para leituras lentas.
       </p>
-      <a href="/reviews/orfeu-classico.html" class="card-link">Ver análise sensorial →</a>
+      <a href="reviews/orfeu-classico.html" class="card-link">Ver análise sensorial →</a>
+    </section>
+
+    <!-- BLOG / POSTS -->
+    <section id="blog" class="grid-posts">
+      <h2>📰 Últimos textos e resenhas</h2>
+      <div class="grid-container"></div>
     </section>
   </main>
 
   <footer>
     © 2025 No Cantinho do Café — por Celio & Laurinha ☕📚
   </footer>
-</body>
+
+  <!-- SCRIPT DE CARREGAMENTO DINÂMICO -->
   <script>
-async function carregarPosts() {
-  try {
-    const resposta = await fetch('posts.json');
-    const posts = await resposta.json();
+    async function carregarPosts() {
+      try {
+        const resposta = await fetch('posts.json');
+        const posts = await resposta.json();
 
-    const container = document.querySelector('.grid-container');
-    posts.forEach(post => {
-      const card = document.createElement('article');
-      card.classList.add('post-card');
-      card.innerHTML = `
-        <a href="${post.link}">
-          <img src="${post.imagem}" alt="${post.titulo}" loading="lazy">
-        </a>
-        <div class="post-text">
-          <h3><a href="${post.link}"><em>${post.titulo}</em></a></h3>
-          <p>${post.autor ? `<strong>${post.autor}</strong> — ` : ''}${post.descricao}</p>
-          <a href="${post.link}" class="ler-mais">→ Ler mais</a>
-        </div>
-      `;
-      container.appendChild(card);
-    });
-  } catch (erro) {
-    console.error('Erro ao carregar posts:', erro);
-  }
-}
+        const container = document.querySelector('.grid-container');
+        posts.forEach(post => {
+          const card = document.createElement('article');
+          card.classList.add('post-card');
+          card.innerHTML = `
+            <a href="${post.link}">
+              <img src="${post.imagem}" alt="${post.titulo}" loading="lazy">
+            </a>
+            <div class="post-text">
+              <h3><a href="${post.link}"><em>${post.titulo}</em></a></h3>
+              <p>${post.autor ? `<strong>${post.autor}</strong> — ` : ''}${post.descricao}</p>
+              <a href="${post.link}" class="ler-mais">→ Ler mais</a>
+            </div>
+          `;
+          container.appendChild(card);
+        });
+      } catch (erro) {
+        console.error('Erro ao carregar posts:', erro);
+      }
+    }
 
-document.addEventListener('DOMContentLoaded', carregarPosts);
-</script>
-
+    document.addEventListener('DOMContentLoaded', carregarPosts);
+  </script>
+</body>
 </html>
+
 
