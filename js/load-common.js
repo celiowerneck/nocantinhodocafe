@@ -7,10 +7,10 @@ document.addEventListener("DOMContentLoaded", async () => {
   // /index.html → "./"
   // /reviews/win-bigly.html → "../"
   // /reviews/livros/win-bigly.html → "../../"
-  const depth = window.location.pathname.split("/").length - 2;
-  const basePath = "../".repeat(depth === 0 ? 0 : depth - 1);
+  const depth = window.location.pathname.split("/").filter(Boolean).length - 1;
+  const basePath = "../".repeat(depth);
 
-  // Função genérica para carregar um arquivo externo (header/footer)
+  // Função genérica para carregar arquivos externos
   async function carregarElemento(elemento, arquivo) {
     try {
       const resposta = await fetch(basePath + arquivo);
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   }
 
-  // Carrega o cabeçalho e rodapé, se existirem na página
+  // Carrega header e footer se existirem
   if (header) await carregarElemento(header, "header.html");
   if (footer) await carregarElemento(footer, "footer.html");
 });
