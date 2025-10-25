@@ -1,0 +1,42 @@
+[
+  {
+    "titulo": "Win Bigly",
+    "autor": "Scott Adams",
+    "descricao": "Um olhar provocativo sobre o poder da persuasão e como emoções e narrativas moldam nossas crenças mais do que os fatos.",
+    "imagem": "IMG/win-bigly.jpg",
+    "link": "reviews/win-bigly.html",
+    "categoria": "Livro"
+  },
+  {
+    "titulo": "Orfeu Clássico – Torra Média",
+    "autor": "Orfeu Cafés Especiais",
+    "descricao": "Notas de caramelo, castanha e chocolate ao leite. Doçura equilibrada e aroma convidativo — ideal para leituras lentas.",
+    "imagem": "IMG/orfeu-classico.jpg",
+    "link": "reviews/orfeu-classico.html",
+    "categoria": "Café"
+  },
+  {
+    "titulo": "A Pausa Entre os Goles",
+    "autor": "Crônica original",
+    "descricao": "Uma reflexão sobre o tempo, o aroma do café e os intervalos que nos reconectam com o essencial.",
+    "imagem": "IMG/pausa-entre-os-goles.jpg",
+    "link": "reviews/pausa-entre-os-goles.html",
+    "categoria": "Crônica"
+  },
+  {
+    "titulo": "O Poder do Hábito",
+    "autor": "Charles Duhigg",
+    "descricao": "Um mergulho fascinante em como os hábitos se formam e podem ser transformados para mudar a vida e o trabalho.",
+    "imagem": "IMG/poder-do-habito.jpg",
+    "link": "reviews/poder-do-habito.html",
+    "categoria": "Livro"
+  },
+  {
+    "titulo": "Café do Cerrado Mineiro",
+    "autor": "Daterra Coffee",
+    "descricao": "Café de origem controlada, com notas de frutas secas e chocolate amargo. Produção sustentável com aroma marcante.",
+    "imagem": "IMG/cafe-cerrado-mineiro.jpg",
+    "link": "reviews/cafe-cerrado-mineiro.html",
+    "categoria": "Café"
+  }
+]
