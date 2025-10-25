@@ -20,7 +20,7 @@ header{
   position: relative;
   width: 100%;              /* ocupa 100% da largura da página (que está limitada) */
   height: 320px;            /* ajuste fino da “faixa” */
-  background: url("IMG/Cabecalho-novo.jpg") center -460px / cover no-repeat;
+  background: url("IMG/Cabecalho-novo.jpg") center -860px / cover no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
