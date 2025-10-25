@@ -2,26 +2,24 @@ document.addEventListener("DOMContentLoaded", async () => {
   const header = document.getElementById("header");
   const footer = document.getElementById("footer");
 
-  // Detecta automaticamente quantos níveis acima precisamos subir
-  // Exemplo:
-  // /index.html → "./"
-  // /reviews/win-bigly.html → "../"
-  // /reviews/livros/win-bigly.html → "../../"
-  const depth = window.location.pathname.split("/").filter(Boolean).length - 1;
-  const basePath = "../".repeat(depth);
+  // Caminhos possíveis (tentaremos ambos automaticamente)
+  const caminhosPossiveis = ["./", "../", "../../"];
 
-  // Função genérica para carregar arquivos externos
   async function carregarElemento(elemento, arquivo) {
-    try {
-      const resposta = await fetch(basePath + arquivo);
-      if (!resposta.ok) throw new Error(`${arquivo} não encontrado`);
-      elemento.innerHTML = await resposta.text();
-    } catch (erro) {
-      console.error(`Erro ao carregar ${arquivo}:`, erro);
+    for (const caminho of caminhosPossiveis) {
+      try {
+        const resposta = await fetch(caminho + arquivo);
+        if (resposta.ok) {
+          elemento.innerHTML = await resposta.text();
+          return; // sucesso, para de procurar
+        }
+      } catch (_) {
+        // tenta o próximo caminho
+      }
     }
+    console.warn(`⚠️ Não foi possível carregar ${arquivo}`);
   }
 
-  // Carrega header e footer se existirem
   if (header) await carregarElemento(header, "header.html");
   if (footer) await carregarElemento(footer, "footer.html");
 });
