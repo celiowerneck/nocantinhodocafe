@@ -16,11 +16,11 @@ body {
 }
 
 /* === TOPO / HERO === */
-header{
+header {
   position: relative;
-  width: 100%;              /* ocupa 100% da largura da página (que está limitada) */
-  height: 320px;            /* ajuste fino da “faixa” */
-  background: url("IMG/Cabecalho-novo.jpg") center -760px / cover no-repeat;
+  width: 100%;
+  height: 320px; /* ajuste fino da faixa */
+  background: url("IMG/Cabecalho-novo.jpg") center -760px / cover no-repeat fixed;
   display: flex;
   flex-direction: column;
   align-items: center;
