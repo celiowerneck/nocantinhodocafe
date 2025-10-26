@@ -1,152 +1,284 @@
-/* =========================================================
-   🎨 BASE GLOBAL (CORES, FONTES, BACKGROUND)
-========================================================= */
+/* === VARIÁVEIS DE COR === */
 :root {
-  --bg: #2A211B;
-  --card: #3A2F28;
-  --text: #F5EBDD;
-  --accent: #D9A744;
-  --border: #4C3E36;
-  --subtle: #C3B299;
+  --bg: #2A211B;         /* fundo principal */
+  --card: #3A2F28;       /* blocos e seções */
+  --text: #F5EBDD;       /* texto principal */
+  --accent: #D9A744;     /* dourado para títulos e destaques */
+  --border: #4C3E36;     /* linhas sutis */
+  --subtle: #C3B299;     /* texto secundário */
 }
 
-body {
+/* === BASE GERAL === */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
   background-color: var(--bg);
   color: var(--text);
   font-family: 'Lora', serif;
-  margin: 0;
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
-/* =========================================================
-   🧱 COMPONENTES REUTILIZÁVEIS
-========================================================= */
-
-/* CARD BASE — usado por Livros, Cafés, E-books */
-.card {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 2.5rem;
+/* === CABEÇALHO / HERO === */
+header {
+  position: relative;
   width: 100%;
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 32px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
-}
-
-/* Imagem lateral */
-.card img {
-  width: 220px;
-  flex-shrink: 0;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-  object-fit: cover;
-}
-
-/* Conteúdo textual do card */
-.card-content {
-  flex: 1;
-  color: var(--text);
-}
-
-.card-content h3 {
-  font-family: "Playfair Display", serif;
-  font-size: 1.6rem;
-  color: var(--accent);
-  margin: 0 0 0.5rem 0;
-}
-
-.card-content p {
-  margin: 0.4rem 0 0.8rem;
-  line-height: 1.7;
-}
-
-/* Botão padrão reutilizável */
-.btn {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 10px 16px;
-  background-color: var(--accent);
-  color: var(--bg);
-  font-weight: 600;
-  text-decoration: none;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #e8d18a;
-  color: #1A100C;
-}
-
-/* =========================================================
-   📚 SEÇÕES (LIVROS / CAFÉS / E-BOOKS)
-========================================================= */
-.catalogo {
+  height: 320px;
+  background: url("IMG/banner-cafe.jpg") center -560px / cover no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 60px 20px 80px;
-}
-
-.catalogo .lista {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  width: 100%;
-  max-width: 1000px;
-}
-
-/* Cabeçalho de seção */
-.secao-titulo {
+  justify-content: center;
+  color: #fff;
   text-align: center;
-  margin-top: 40px;
-  padding: 0 20px;
+  font-family: 'Playfair Display', serif;
+  overflow: hidden;
 }
 
-.secao-titulo h2 {
-  font-family: "Playfair Display", serif;
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1;
+}
+
+header h1 {
+  position: relative;
+  z-index: 2;
+  font-size: 2.8rem;
+  color: var(--accent);
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+header p {
+  position: relative;
+  z-index: 2;
+  font-style: italic;
+  margin-top: 10px;
+  color: #f0f0e6;
+}
+
+/* === MENU PRINCIPAL === */
+nav {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+}
+
+nav a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0 1rem;
+  padding: 0.4rem 0.8rem;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+nav a:hover { background: rgba(0, 0, 0, 0.6); }
+
+/* === CONTEÚDO PRINCIPAL === */
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 0 3rem 3rem;
+}
+
+section {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease;
+}
+section:hover { transform: translateY(-4px); }
+
+/* === TÍTULOS === */
+h2 {
+  font-family: 'Playfair Display', serif;
   font-size: 2rem;
+  color: var(--accent);
+  text-align: center;
+  margin: 2rem auto 1rem;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* === RODAPÉ === */
+footer {
+  text-align: center;
+  padding: 2rem;
+  border-top: 1px solid var(--border);
+  color: var(--subtle);
+  font-size: 0.95rem;
+}
+
+/* === ÍCONE XÍCARA === */
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.cup-icon {
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--accent);
+  border-radius: 4px 4px 12px 12px;
+  background: linear-gradient(to bottom, #3A2F28 50%, #2A211B 50%);
+  position: relative;
+}
+.cup-icon::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 12px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  border-bottom: none;
+  border-left: none;
+  transform: rotate(45deg);
+}
+.steam {
+  position: absolute;
+  top: -18px;
+  left: 15px;
+  width: 8px;
+  height: 18px;
+  border-left: 2px solid rgba(213,191,162,0.5);
+  border-radius: 50%;
+  animation: steamUp 3s ease-in-out infinite;
+}
+@keyframes steamUp {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-20px); opacity: 0; }
+}
+
+/* === BOTÕES === */
+a.botao-comprar,
+.ler-mais,
+.feed-posts .lermais {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background: var(--accent);
+  color: var(--bg);
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease, color 0.3s ease;
+  margin-top: 1rem;
+}
+
+a.botao-comprar:hover,
+.ler-mais:hover,
+.feed-posts .lermais:hover {
+  background: #e8d18a;
+  color: var(--bg);
+}
+
+/* === CATÁLOGO DE LIVROS E CAFÉS === */
+.secao-titulo {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 32px 16px 20px;
+}
+.secao-titulo h2 {
   color: var(--accent);
   margin-bottom: 10px;
 }
+.secao-titulo .intro-secao {
+  max-width: 900px;
+  line-height: 1.6;
+  color: var(--text);
+  margin: 0;
+}
 
-.secao-titulo p {
-  max-width: 850px;
+.catalogo-livros {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 0 16px 40px;
+}
+.lista-livros {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  width: 100%;
+  max-width: 1000px;
   margin: 0 auto;
+  justify-items: center;
+}
+
+/* === CARDS === */
+.card-livro {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+.card-livro:hover { transform: translateY(-5px); }
+
+.capa-livro {
+  width: 180px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.25);
+}
+
+.texto-card {
+  text-align: center;
   color: var(--text);
 }
 
-/* =========================================================
-   📱 RESPONSIVIDADE
-========================================================= */
-@media (max-width: 900px) {
-  .card {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 24px;
-  }
-
-  .card img {
-    width: 70%;
-    margin-bottom: 1rem;
-  }
-
-  .card-content {
-    text-align: center;
-  }
-
-  .card-content h3 {
-    font-size: 1.4rem;
-  }
+/* === FEED DE POSTS / BLOG === */
+.feed-posts {
+  max-width: 1000px;
+  margin: 3rem auto;
+  background: var(--card);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  padding: 2rem;
 }
+.feed-posts h2 { color: var(--accent); text-align: center; margin-bottom: 2rem; }
+.feed-posts .post {
+  display: flex;
+  align-items: center;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.2rem;
+  margin-bottom: 1.5rem;
+  transition: transform 0.2s ease;
+}
+.feed-posts .post:hover { transform: translateY(-4px); }
+.feed-posts .thumb { width: 140px; height: 140px; object-fit: cover; border-radius: 8px; margin-right: 1.5rem; }
+.feed-posts .conteudo h3 a { color: var(--accent); text-decoration: none; font-family: 'Playfair Display', serif; }
+.feed-posts .conteudo h3 a:hover { color: #f0d88f; }
+.feed-posts .conteudo p { color: var(--text); line-height: 1.6; }
+
+/* === RESPONSIVIDADE === */
+@media (max-width: 900px) {
+  main { grid-template-columns: 1fr; padding: 0 1.5rem 3rem; }
+  header { height: 220px; padding-bottom: 30px; }
+  header h1 { font-size: 2rem; }
+  .post { flex-direction: column; align-items: flex-start; }
+  .post img { width: 100%; height: 200px; border-radius: 8px 8px 0 0; }
+}
+
 
