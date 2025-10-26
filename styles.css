@@ -498,5 +498,82 @@ a.botao-comprar:hover {
     text-align: center;
   }
 }
+/* ====== CATÁLOGO (Livros & Cafés) — Layout unificado ====== */
+
+/* Lista de cards em coluna, centralizada e com respiro */
+.catalogo-livros .lista-livros {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  margin-top: 60px;              /* espaço abaixo do cabeçalho/intro */
+}
+
+/* Card horizontal */
+.catalogo-livros .card-livro {
+  display: flex !important;      /* garante flex mesmo se houver regras antigas */
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2.4rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px;
+  max-width: 950px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform .2s ease, box-shadow .3s ease;
+}
+.catalogo-livros .card-livro:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.4);
+}
+
+/* Imagem/capa à esquerda */
+.catalogo-livros .card-livro .capa-livro {
+  width: 190px;                  /* ajuste fino do tamanho da capa */
+  flex-shrink: 0;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+}
+
+/* Texto e botão à direita */
+.catalogo-livros .card-livro .texto-card {
+  flex: 1;
+  text-align: left;
+  color: var(--text);
+}
+.catalogo-livros .card-livro .texto-card h3 {
+  margin: 0 0 .5rem 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.35rem;
+  color: var(--accent);
+}
+.catalogo-livros .card-livro .texto-card p {
+  margin: .4rem 0 .8rem;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Botão padrão (reaproveitado) */
+.catalogo-livros .card-livro a.botao-comprar {
+  display: inline-block;
+  padding: 8px 14px;
+  background: var(--accent);
+  color: var(--bg);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background .3s ease, color .3s ease;
+}
+.catalogo-livros .card-livro a.botao-comprar:hover {
+  background: #e8d18a;
+  color: #1A100C;
+}
+
+/* — Responsivo — */
+@media (max-width: 900px) {
+  .catalogo-livros .card-livro { gap: 1.4rem; padding: 22px; }
+  .catalogo-livros .card-livro .
 
 
