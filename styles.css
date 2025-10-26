@@ -415,5 +415,84 @@ a.botao-comprar:hover {
     text-align: center;
   }
 }
+/* ===== AJUSTE DE LAYOUT DOS CARDS ===== */
+.card-livro {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 40px;
+  background: #2b211b;
+  color: #fffbe9;
+  border-radius: 12px;
+  padding: 40px;
+  margin: 40px auto;
+  max-width: 1000px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+}
+
+.card-livro img.capa-livro {
+  width: 220px;
+  height: auto;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.texto-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+.texto-card h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.6rem;
+  color: #d9a744;
+  margin-bottom: 10px;
+}
+
+.texto-card p {
+  font-size: 1rem;
+  color: #f5f2ec;
+  margin-bottom: 10px;
+}
+
+.botao-comprar {
+  align-self: flex-start;
+  background: #d9a744;
+  color: #2b211b;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.botao-comprar:hover {
+  background: #f0c86d;
+  transform: translateY(-2px);
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+  .card-livro {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 25px;
+  }
+
+  .card-livro img.capa-livro {
+    width: 60%;
+    margin-bottom: 20px;
+  }
+
+  .texto-card {
+    align-items: center;
+  }
+
+  .botao-comprar {
+    align-self: center;
+  }
+}
 
 
