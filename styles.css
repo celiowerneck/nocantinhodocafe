@@ -1,599 +1,91 @@
-/* === VARIÁVEIS DE COR === */
+/* =========================================================
+ 🌿 NO CANTINHO DO CAFÉ — CSS LIMPO E UNIFICADO
+ Layout responsivo e modular para Livros, Cafés e Resenhas
+========================================================= */
+
+/* 🎨 PALETA E VARIÁVEIS DE COR */
 :root {
-  --bg: #2A211B;         /* fundo principal */
-  --card: #3A2F28;       /* blocos e seções */
-  --text: #F5EBDD;       /* texto principal */
-  --accent: #D9A744;     /* dourado para títulos e destaques */
-  --border: #4C3E36;     /* linhas sutis */
-  --subtle: #C3B299;     /* texto secundário */
+  --bg: #2A211B;
+  --card: #3A2F28;
+  --text: #F5EBDD;
+  --accent: #D9A744;
+  --border: #4C3E36;
+  --subtle: #C3B299;
 }
 
-/* === BASE GERAL === */
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+/* =========================================================
+ 🧱 BASE GLOBAL
+========================================================= */
+body {
   background-color: var(--bg);
   color: var(--text);
   font-family: 'Lora', serif;
-  line-height: 1.75;
+  margin: 0;
+  line-height: 1.7;
 }
 
-/* === CABEÇALHO / HERO === */
-header {
-  position: relative;
-  width: 100%;
-  height: 320px;
-  background: url("IMG/banner-cafe.jpg") center -560px / cover no-repeat;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  text-align: center;
+h1, h2, h3 {
   font-family: 'Playfair Display', serif;
-  overflow: hidden;
-}
-
-header::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.35);
-  z-index: 1;
-}
-
-header h1 {
-  position: relative;
-  z-index: 2;
-  font-size: 2.8rem;
   color: var(--accent);
   margin: 0;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
-header p {
-  position: relative;
-  z-index: 2;
-  font-style: italic;
-  margin-top: 10px;
-  color: #f0f0e6;
-}
-
-/* === MENU PRINCIPAL === */
-nav {
-  position: absolute;
-  bottom: 20px;
-  width: 100%;
-  text-align: center;
-  z-index: 2;
-}
-
-nav a {
+a {
   color: var(--accent);
   text-decoration: none;
-  font-weight: 600;
-  margin: 0 1rem;
-  padding: 0.4rem 0.8rem;
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 6px;
-  transition: background 0.3s ease;
 }
 
-nav a:hover { background: rgba(0, 0, 0, 0.6); }
+a:hover {
+  color: #e8d18a;
+}
 
-/* === CONTEÚDO PRINCIPAL === */
+/* =========================================================
+ 📰 SEÇÕES GERAIS
+========================================================= */
 main {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  padding: 0 3rem 3rem;
+  margin-top: 60px;
 }
 
-section {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.25);
-  transition: transform 0.3s ease;
-}
-section:hover { transform: translateY(-4px); }
-
-/* === TÍTULOS === */
-h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  color: var(--accent);
-  text-align: center;
-  margin: 2rem auto 1rem;
-  letter-spacing: 0.5px;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
-}
-
-/* === RODAPÉ === */
-footer {
-  text-align: center;
-  padding: 2rem;
-  border-top: 1px solid var(--border);
-  color: var(--subtle);
-  font-size: 0.95rem;
-}
-
-/* === ÍCONE XÍCARA === */
-.logo {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-}
-
-.cup-icon {
-  width: 40px;
-  height: 40px;
-  border: 2px solid var(--accent);
-  border-radius: 4px 4px 12px 12px;
-  background: linear-gradient(to bottom, #3A2F28 50%, #2A211B 50%);
-  position: relative;
-}
-.cup-icon::before {
-  content: '';
-  position: absolute;
-  top: -10px;
-  left: 12px;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  border: 2px solid var(--accent);
-  border-bottom: none;
-  border-left: none;
-  transform: rotate(45deg);
-}
-.steam {
-  position: absolute;
-  top: -18px;
-  left: 15px;
-  width: 8px;
-  height: 18px;
-  border-left: 2px solid rgba(213,191,162,0.5);
-  border-radius: 50%;
-  animation: steamUp 3s ease-in-out infinite;
-}
-@keyframes steamUp {
-  0% { transform: translateY(0); opacity: 1; }
-  100% { transform: translateY(-20px); opacity: 0; }
-}
-
-/* === BOTÕES === */
-a.botao-comprar,
-.ler-mais,
-.feed-posts .lermais {
-  display: inline-block;
-  padding: 0.6rem 1.2rem;
-  background: var(--accent);
-  color: var(--bg);
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background 0.3s ease, color 0.3s ease;
-  margin-top: 1rem;
-}
-
-a.botao-comprar:hover,
-.ler-mais:hover,
-.feed-posts .lermais:hover {
-  background: #e8d18a;
-  color: var(--bg);
-}
-
-/* === CATÁLOGO DE LIVROS E CAFÉS === */
 .secao-titulo {
-  display: grid;
-  place-items: center;
   text-align: center;
-  padding: 32px 16px 20px;
+  margin-top: 40px;
+  padding: 0 20px;
 }
+
 .secao-titulo h2 {
-  color: var(--accent);
+  font-size: 2rem;
   margin-bottom: 10px;
 }
-.secao-titulo .intro-secao {
-  max-width: 900px;
-  line-height: 1.6;
-  color: var(--text);
-  margin: 0;
-}
 
-.catalogo-livros {
-  display: grid;
-  place-items: center;
-  text-align: center;
-  padding: 0 16px 40px;
-}
-.lista-livros {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
-  width: 100%;
-  max-width: 1000px;
+.secao-titulo p {
+  max-width: 850px;
   margin: 0 auto;
-  justify-items: center;
-}
-
-/* === CARDS === */
-.card-livro {
-  background: var(--card);
-  border-radius: 10px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-  transition: transform 0.2s ease;
-}
-.card-livro:hover { transform: translateY(-5px); }
-
-.capa-livro {
-  width: 180px;
-  border-radius: 6px;
-  margin-bottom: 15px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.25);
-}
-
-.texto-card {
-  text-align: center;
+  line-height: 1.7;
   color: var(--text);
 }
 
-/* === FEED DE POSTS / BLOG === */
-.feed-posts {
-  max-width: 1000px;
-  margin: 3rem auto;
-  background: var(--card);
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-  padding: 2rem;
-}
-.feed-posts h2 { color: var(--accent); text-align: center; margin-bottom: 2rem; }
-.feed-posts .post {
-  display: flex;
-  align-items: center;
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 1.2rem;
-  margin-bottom: 1.5rem;
-  transition: transform 0.2s ease;
-}
-.feed-posts .post:hover { transform: translateY(-4px); }
-.feed-posts .thumb { width: 140px; height: 140px; object-fit: cover; border-radius: 8px; margin-right: 1.5rem; }
-.feed-posts .conteudo h3 a { color: var(--accent); text-decoration: none; font-family: 'Playfair Display', serif; }
-.feed-posts .conteudo h3 a:hover { color: #f0d88f; }
-.feed-posts .conteudo p { color: var(--text); line-height: 1.6; }
-
-/* === RESPONSIVIDADE === */
-@media (max-width: 900px) {
-  main { grid-template-columns: 1fr; padding: 0 1.5rem 3rem; }
-  header { height: 220px; padding-bottom: 30px; }
-  header h1 { font-size: 2rem; }
-  .post { flex-direction: column; align-items: flex-start; }
-  .post img { width: 100%; height: 200px; border-radius: 8px 8px 0 0; }
-}
-/* === AJUSTE DE TÍTULOS EM PÁGINAS INDIVIDUAIS (LIVROS E CAFÉS) === */
-.resenha-unica h2,
-.dados-livro h2,
-.dados-cafe h2 {
-  font-size: 1.6rem;          /* reduzido e proporcional */
-  line-height: 1.3;
-  text-align: left;           /* leitura fluida para títulos longos */
-  margin-top: 0;
-  margin-bottom: 1rem;
-  color: var(--accent);
-  text-shadow: none;          /* remove o brilho dourado das páginas internas */
-  font-family: "Playfair Display", serif;
-}
-
-.dados-livro h2 em,
-.dados-cafe h2 em {
-  font-style: italic;
-  font-weight: 600;
-}
-
-/* Parágrafos dentro das fichas */
-.dados-livro p,
-.dados-cafe p {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin-bottom: 0.5rem;
-  color: var(--text);
-}
-/* === AJUSTE DE TÍTULOS E FICHAS – LIVROS & CAFÉS === */
-.resenha-unica h2,
-.dados-livro h2,
-.dados-cafe h2 {
-  font-family: "Playfair Display", serif;
-  font-size: 1.6rem;
-  line-height: 1.3;
-  text-align: left;
-  margin-top: 0;
-  margin-bottom: 1rem;
-  color: var(--accent);
-  text-shadow: none; /* remove sombra dourada que pesa em textos longos */
-}
-
-/* Destaques em itálico nos títulos */
-.dados-livro h2 em,
-.dados-cafe h2 em {
-  font-style: italic;
-  font-weight: 600;
-}
-
-/* Textos dentro das fichas */
-.dados-livro p,
-.dados-cafe p {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin-bottom: 0.5rem;
-  color: var(--text);
-}
-
-/* Mantém boa proporção e conforto visual nas páginas individuais */
-.resenha-unica,
-.cafe-unico {
-  max-width: 1200px;  /* limita largura em monitores grandes */
-  margin: 0 auto;
-}
-
-/* === AJUSTE TIPOGRÁFICO PARA TELAS MUITO GRANDES (≥1600px) === */
-@media (min-width: 1600px) {
-  .resenha-unica h2,
-  .dados-livro h2,
-  .dados-cafe h2 {
-    font-size: 1.4rem;  /* ligeiramente menor para monitores grandes */
-  }
-
-  .dados-livro p,
-  .dados-cafe p {
-    font-size: 0.9rem;  /* ajuste fino de leitura */
-  }
-
-  .resenha-unica,
-  .cafe-unico {
-    max-width: 1100px; /* evita que o texto se espalhe demais */
-  }
-}
-/* === CABEÇALHO PRINCIPAL === */
-header {
-  position: relative;
-  width: 100%;
-  height: 320px; /* ajuste conforme desejar */
-  background: url("IMG/banner-ultra-novo.jpg") center center / cover no-repeat;
-  background-attachment: scroll;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  text-align: center;
-  font-family: 'Playfair Display', serif;
-  overflow: hidden;
-  filter: sepia(0.00) contrast(1.05) brightness(0.9); /* garante o clima sépia */
-}
-
-header::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.35); /* leve escurecimento para contraste do texto */
-  z-index: 1;
-}
-
-header h1,
-header p,
-header nav {
-  position: relative;
-  z-index: 2;
-}
-/* === RESPIRO ENTRE CABEÇALHO E CONTEÚDO === */
-main,
-.resenha-unica,
-.catalogo-livros,
-.feed-coluna {
-  margin-top: 60px; /* cria espaço confortável abaixo do banner */
-}
-
-/* Ajuste específico para resenhas e páginas internas */
-.resenha-unica {
-  padding-top: 40px;
-}
-
-/* Em telas menores, reduza o espaçamento para não “empurrar” demais */
-@media (max-width: 768px) {
-  main,
-  .resenha-unica,
-  .catalogo-livros,
-  .feed-coluna {
-    margin-top: 40px;
-  }
-  .resenha-unica {
-    padding-top: 20px;
-  }
-}
-/* === LAYOUT HORIZONTAL PARA CARDS DE LIVROS & CAFÉS === */
-.card-livro {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  background: var(--card);
-  border-radius: 12px;
-  padding: 24px;
-  gap: 2rem; /* espaço entre imagem e texto */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
-  max-width: 950px;
-  margin: 0 auto 40px auto;
-}
-
-.card-livro:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
-}
-
-.capa-livro {
-  width: 180px;
-  flex-shrink: 0;
-  border-radius: 8px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
-}
-
-.texto-card {
-  text-align: left;
-  color: var(--text);
-  flex: 1;
-}
-
-.texto-card h3 {
-  font-family: 'Playfair Display', serif;
-  color: var(--accent);
-  margin-top: 0;
-  font-size: 1.3rem;
-}
-
-.texto-card p {
-  margin: 0.4rem 0 0.8rem;
-  line-height: 1.6;
-  font-size: 1rem;
-}
-
-a.botao-comprar {
-  display: inline-block;
-  background-color: var(--accent);
-  color: #2A211B;
-  font-weight: 600;
-  text-decoration: none;
-  padding: 8px 14px;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-}
-
-a.botao-comprar:hover {
-  background-color: #e8d18a;
-  color: #1A100C;
-}
-
-/* === RESPONSIVO === */
-@media (max-width: 800px) {
-  .card-livro {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .capa-livro {
-    width: 70%;
-    margin-bottom: 1rem;
-  }
-
-  .texto-card {
-    text-align: center;
-  }
-}
-/* ====== CATÁLOGO (Livros & Cafés) — Layout unificado ====== */
-
-/* Lista de cards em coluna, centralizada e com respiro */
-.catalogo-livros .lista-livros {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 40px;
-  margin-top: 60px;              /* espaço abaixo do cabeçalho/intro */
-}
-
-/* Card horizontal */
-.catalogo-livros .card-livro {
-  display: flex !important;      /* garante flex mesmo se houver regras antigas */
-  align-items: center;
-  justify-content: flex-start;
-  gap: 2.4rem;
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 28px;
-  max-width: 950px;
-  width: 100%;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  transition: transform .2s ease, box-shadow .3s ease;
-}
-.catalogo-livros .card-livro:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.4);
-}
-
-/* Imagem/capa à esquerda */
-.catalogo-livros .card-livro .capa-livro {
-  width: 190px;                  /* ajuste fino do tamanho da capa */
-  flex-shrink: 0;
-  border-radius: 8px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.4);
-}
-
-/* Texto e botão à direita */
-.catalogo-livros .card-livro .texto-card {
-  flex: 1;
-  text-align: left;
-  color: var(--text);
-}
-.catalogo-livros .card-livro .texto-card h3 {
-  margin: 0 0 .5rem 0;
-  font-family: 'Playfair Display', serif;
-  font-size: 1.35rem;
-  color: var(--accent);
-}
-.catalogo-livros .card-livro .texto-card p {
-  margin: .4rem 0 .8rem;
-  line-height: 1.6;
-  font-size: 1rem;
-}
-
-/* Botão padrão (reaproveitado) */
-.catalogo-livros .card-livro a.botao-comprar {
-  display: inline-block;
-  padding: 8px 14px;
-  background: var(--accent);
-  color: var(--bg);
-  font-weight: 600;
-  text-decoration: none;
-  border-radius: 6px;
-  transition: background .3s ease, color .3s ease;
-}
-.catalogo-livros .card-livro a.botao-comprar:hover {
-  background: #e8d18a;
-  color: #1A100C;
-}
-
-/* — Responsivo — */
-@media (max-width: 900px) {
-  .catalogo-livros .card-livro { gap: 1.4rem; padding: 22px; }
-  .catalogo-livros .card-livro .
-/* === SEÇÕES DE CATÁLOGO (Livros & Cafés) — Layout Unificado === */
-.catalogo-livros {
+/* =========================================================
+ 📚 CATÁLOGOS (Livros / Cafés / E-books)
+========================================================= */
+.catalogo {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 60px 20px 80px;
 }
 
-.catalogo-livros .lista-livros {
+.catalogo .lista {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 40px;
   width: 100%;
   max-width: 1000px;
 }
 
-/* === CARD PADRÃO: IMAGEM À ESQUERDA, TEXTO À DIREITA === */
-.catalogo-livros .card-livro {
+/* =========================================================
+ 🧩 CARD BASE — usado em Livros e Cafés
+========================================================= */
+.card {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -607,13 +99,13 @@ a.botao-comprar:hover {
   transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
-.catalogo-livros .card-livro:hover {
+.card:hover {
   transform: translateY(-4px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
 }
 
-/* === CAPA (LIVRO OU CAFÉ) === */
-.catalogo-livros .card-livro .capa-livro {
+/* 📸 IMAGEM DO CARD */
+.card img {
   width: 220px;
   flex-shrink: 0;
   border-radius: 8px;
@@ -621,29 +113,27 @@ a.botao-comprar:hover {
   object-fit: cover;
 }
 
-/* === BLOCO DE TEXTO AO LADO === */
-.catalogo-livros .card-livro .texto-card {
+/* 📝 CONTEÚDO DO CARD */
+.card-content {
   flex: 1;
   color: var(--text);
-  text-align: left;
 }
 
-.catalogo-livros .card-livro .texto-card h3 {
-  font-family: "Playfair Display", serif;
+.card-content h3 {
   font-size: 1.6rem;
-  color: var(--accent);
-  margin: 0 0 0.5rem 0;
+  margin-bottom: 0.5rem;
 }
 
-.catalogo-livros .card-livro .texto-card p {
+.card-content p {
   margin: 0.4rem 0 0.8rem;
-  line-height: 1.7;
   font-size: 1rem;
-  color: var(--text);
+  line-height: 1.7;
 }
 
-/* === BOTÃO PADRÃO === */
-.catalogo-livros .card-livro a.botao-comprar {
+/* =========================================================
+ 🔘 BOTÕES PADRÃO
+========================================================= */
+.btn {
   display: inline-block;
   margin-top: 1rem;
   padding: 10px 16px;
@@ -655,53 +145,57 @@ a.botao-comprar:hover {
   transition: all 0.3s ease;
 }
 
-.catalogo-livros .card-livro a.botao-comprar:hover {
+.btn:hover {
   background-color: #e8d18a;
   color: #1A100C;
 }
 
-/* === TÍTULO E INTRO DAS SEÇÕES === */
-.secao-titulo {
-  text-align: center;
-  margin-top: 40px;
-  padding: 0 20px;
-}
-
-.secao-titulo h2 {
-  font-family: "Playfair Display", serif;
-  font-size: 2rem;
-  color: var(--accent);
-  margin-bottom: 10px;
-}
-
-.secao-titulo .intro-secao {
-  max-width: 850px;
-  margin: 0 auto;
-  line-height: 1.7;
+/* =========================================================
+ 📖 RESENHAS E CONTEÚDOS INTERNOS
+========================================================= */
+.resenha-unica {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 20px;
+  line-height: 1.8;
   color: var(--text);
 }
 
-/* === RESPONSIVO === */
+.resenha-unica img {
+  width: 100%;
+  border-radius: 12px;
+  margin: 20px 0;
+}
+
+/* =========================================================
+ 📱 RESPONSIVIDADE
+========================================================= */
 @media (max-width: 900px) {
-  .catalogo-livros .card-livro {
+  .card {
     flex-direction: column;
     align-items: center;
     text-align: center;
     padding: 24px;
   }
 
-  .catalogo-livros .card-livro .capa-livro {
+  .card img {
     width: 70%;
     margin-bottom: 1rem;
   }
 
-  .catalogo-livros .card-livro .texto-card {
+  .card-content {
     text-align: center;
   }
 
-  .catalogo-livros .card-livro .texto-card h3 {
+  .card-content h3 {
     font-size: 1.4rem;
   }
+
+  .resenha-unica {
+    margin: 40px auto;
+    padding: 16px;
+  }
 }
+
 
 
