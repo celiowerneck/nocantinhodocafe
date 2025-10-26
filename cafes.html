@@ -9,18 +9,19 @@
   <link rel="stylesheet" href="styles.css" />
   <script src="js/load-common.js" defer></script>
 </head>
-
 <body>
-  <!-- Cabeçalho será carregado automaticamente -->
   <div id="header"></div>
 
-  <main class="catalogo-livros">
+  <!-- Cabeçalho da seção (fora do main) -->
+  <section class="secao-titulo">
     <h2>☕ Cafés & Notas de Sabor</h2>
-    <p class="intro-livros">
+    <p class="intro-secao">
       Cada café carrega uma história em seu aroma e uma experiência em cada gole.
       Explore os grãos, torras e origens que harmonizam perfeitamente com boas leituras.
     </p>
+  </section>
 
+  <main class="catalogo-livros">
     <section class="lista-livros">
       <!-- CARD 1 – Orfeu -->
       <article class="card-livro">
@@ -33,24 +34,10 @@
           <a href="reviews/cafe-orfeu-classico.html" class="botao-comprar">→ Ver análise sensorial</a>
         </div>
       </article>
-
-      <!-- CARD 2 – Exemplo futuro -->
-      <!--
-      <article class="card-livro">
-        <img src="IMG/cafe-santa-clara.jpg" alt="Café Santa Clara Gourmet" class="capa-livro" loading="lazy">
-        <div class="texto-card">
-          <h3><em>Santa Clara Gourmet</em></h3>
-          <p><strong>Origem:</strong> Alta Mogiana</p>
-          <p><strong>Notas:</strong> avelã, baunilha e mel.</p>
-          <p>Leve e aromático, perfeito para manhãs criativas e conversas inspiradas.</p>
-          <a href="reviews/santa-clara.html" class="botao-comprar">→ Ver análise sensorial</a>
-        </div>
-      </article>
-      -->
     </section>
   </main>
 
-  <!-- Rodapé será carregado automaticamente -->
   <div id="footer"></div>
 </body>
 </html>
+
