@@ -1,206 +1,160 @@
-/* =========================================================
- 🎨 NO CANTINHO DO CAFÉ — ESTILO OFICIAL AJUSTADO
- Mantém o visual sépia, limpo e com tipografia refinada
-========================================================= */
-
-/* === VARIÁVEIS DE COR === */
-:root {
-  --bg: #2A211B;
-  --card: #3A2F28;
-  --text: #F5EBDD;
-  --accent: #D9A744;
-  --border: #4C3E36;
-  --subtle: #C3B299;
-}
-
-/* === BASE === */
-body {
-  background-color: var(--bg);
-  color: var(--text);
-  font-family: 'Lora', serif;
+/* ===== RESET ===== */
+* {
   margin: 0;
-  line-height: 1.7;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html, body {
-  width: 100%;
+body {
+  font-family: "Lora", serif;
+  background-color: #f5f2ec;
+  color: #2a2a2a;
+  line-height: 1.6;
   overflow-x: hidden;
 }
 
-/* === CABEÇALHO === */
-header {
-  position: relative;
-  width: 100%;
-  height: 320px;
-  background: url("IMG/banner-cafe.jpg") center / cover no-repeat;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  text-align: center;
-  font-family: 'Playfair Display', serif;
+/* ===== LINKS ===== */
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-header::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.35);
-  z-index: 1;
+/* ===== HEADER ===== */
+header {
+  text-align: center;
+  padding: 40px 20px;
+  background: url("IMG/Banner-ultra-novo.jpg") center/cover no-repeat;
+  color: #fff;
 }
 
 header h1 {
-  position: relative;
-  z-index: 2;
-  font-size: 2.6rem;
-  color: var(--accent);
-  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  font-family: "Playfair Display", serif;
+  font-size: 2.8rem;
+  margin-bottom: 10px;
 }
 
 header p {
-  position: relative;
-  z-index: 2;
   font-style: italic;
-  color: #f0f0e6;
+  font-size: 1.1rem;
+  color: #f5e9d2;
 }
 
-/* === MENU === */
-nav {
-  position: absolute;
-  bottom: 20px;
-  width: 100%;
-  text-align: center;
-  z-index: 2;
+/* ===== NAV ===== */
+.menu-principal {
+  margin-top: 25px;
 }
 
-nav a {
-  color: var(--accent);
-  text-decoration: none;
+.menu-principal a {
+  margin: 0 8px;
+  padding: 6px 14px;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.35);
+  color: #d9a744;
   font-weight: 600;
-  margin: 0 1rem;
-  padding: 0.4rem 0.8rem;
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 6px;
-  transition: background 0.3s ease;
+  transition: background 0.25s ease;
 }
 
-nav a:hover {
+.menu-principal a:hover {
   background: rgba(0, 0, 0, 0.6);
 }
 
-/* === SEÇÃO TÍTULO (usada em Livros e Cafés) === */
+/* ===== SEÇÕES ===== */
 .secao-titulo {
   text-align: center;
-  padding: 60px 20px 20px;
+  margin: 60px auto 30px;
+  max-width: 720px;
+  padding: 0 16px;
 }
 
 .secao-titulo h2 {
   font-family: "Playfair Display", serif;
-  font-size: 2rem;
-  color: var(--accent);
+  font-size: 1.9rem;
+  color: #3a3a3a;
   margin-bottom: 10px;
 }
 
-.secao-titulo .intro-secao {
-  max-width: 900px;
-  margin: 0 auto;
-  line-height: 1.7;
-  color: var(--text);
+.intro-secao {
+  font-size: 1rem;
+  color: #555;
 }
 
-/* === CATÁLOGO (Livros & Cafés) === */
-.catalogo-livros {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 40px 20px 80px;
-}
-
+/* ===== CARDS ===== */
 .lista-livros {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  width: 100%;
-  max-width: 1000px;
+  max-width: 960px;
+  margin: 0 auto 60px;
+  padding: 0 16px;
 }
 
-/* === CARD DE LIVRO / CAFÉ === */
 .card-livro {
   display: flex;
   align-items: flex-start;
-  background: var(--card);
-  border: 1px solid var(--border);
+  gap: 20px;
+  background: #fff;
+  padding: 20px;
   border-radius: 12px;
-  padding: 24px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
-.card-livro:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.4);
-}
-
-/* IMAGEM DO CARD */
-.capa-livro {
+.card-livro img.capa-livro {
   width: 200px;
   height: auto;
   border-radius: 8px;
-  margin-right: 24px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
 
-/* TEXTO DO CARD */
 .texto-card {
   flex: 1;
-  color: var(--text);
 }
 
 .texto-card h3 {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 1.4rem;
-  color: var(--accent);
-  margin-bottom: 0.4rem;
+  color: #2c2c2c;
+  margin-bottom: 8px;
 }
 
 .texto-card p {
-  margin: 0.4rem 0;
-  line-height: 1.6;
-  color: var(--text);
+  margin-bottom: 6px;
+  color: #444;
 }
 
-/* BOTÃO */
 .botao-comprar {
   display: inline-block;
-  margin-top: 0.8rem;
+  margin-top: 10px;
   padding: 8px 14px;
-  background-color: #1A100C;
-  color: var(--accent);
-  font-weight: bold;
-  text-decoration: none;
   border-radius: 6px;
-  transition: all 0.3s ease;
+  background: rgba(0, 0, 0, 0.05);
+  color: #d9a744;
+  font-weight: bold;
+  transition: background 0.25s ease, color 0.25s ease;
 }
 
 .botao-comprar:hover {
-  background-color: var(--accent);
-  color: #1A100C;
+  background: #d9a744;
+  color: #fff;
 }
 
-/* === RODAPÉ === */
+/* ===== FOOTER ===== */
 footer {
   text-align: center;
-  padding: 2rem;
-  border-top: 1px solid var(--border);
-  color: var(--subtle);
-  font-size: 0.95rem;
+  padding: 30px 10px;
+  background: #2f2f2f;
+  color: #eaeaea;
+  font-size: 0.9rem;
 }
 
-/* === RESPONSIVO === */
-@media (max-width: 900px) {
-  header { height: 220px; }
-  header h1 { font-size: 2rem; }
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+  header {
+    padding: 60px 15px;
+  }
+
+  header h1 {
+    font-size: 2.2rem;
+  }
 
   .card-livro {
     flex-direction: column;
@@ -208,13 +162,12 @@ footer {
     text-align: center;
   }
 
-  .capa-livro {
-    margin: 0 0 1rem;
-    width: 70%;
+  .card-livro img.capa-livro {
+    width: 60%;
   }
 
-  .texto-card {
-    text-align: center;
+  .menu-principal {
+    margin-top: 20px;
   }
 }
 
