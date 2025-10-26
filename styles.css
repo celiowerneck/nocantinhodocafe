@@ -740,5 +740,21 @@ h2 {
 .capa-livro { width: 180px; border-radius: 6px; margin-bottom: 12px; }
 .texto-card { text-align: center; }
 
+a.botao-comprar {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 14px;
+  background-color: #1A100C;
+  color: #D9A744 !important;  /* garante que prevaleça sobre heranças */
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+a.botao-comprar:hover {
+  background-color: #D9A744;
+  color: #1A100C !important;
+}
 
 
