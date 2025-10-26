@@ -280,5 +280,33 @@ a.botao-comprar:hover,
   .post { flex-direction: column; align-items: flex-start; }
   .post img { width: 100%; height: 200px; border-radius: 8px 8px 0 0; }
 }
+/* === AJUSTE DE TÍTULOS EM PÁGINAS INDIVIDUAIS (LIVROS E CAFÉS) === */
+.resenha-unica h2,
+.dados-livro h2,
+.dados-cafe h2 {
+  font-size: 1.6rem;          /* reduzido e proporcional */
+  line-height: 1.3;
+  text-align: left;           /* leitura fluida para títulos longos */
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--accent);
+  text-shadow: none;          /* remove o brilho dourado das páginas internas */
+  font-family: "Playfair Display", serif;
+}
+
+.dados-livro h2 em,
+.dados-cafe h2 em {
+  font-style: italic;
+  font-weight: 600;
+}
+
+/* Parágrafos dentro das fichas */
+.dados-livro p,
+.dados-cafe p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
 
 
