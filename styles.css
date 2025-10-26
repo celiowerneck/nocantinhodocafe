@@ -378,7 +378,7 @@ header {
   text-align: center;
   font-family: 'Playfair Display', serif;
   overflow: hidden;
-  filter: sepia(0.85) contrast(1.05) brightness(0.9); /* garante o clima sépia */
+  filter: sepia(0.00) contrast(1.05) brightness(0.9); /* garante o clima sépia */
 }
 
 header::before {
