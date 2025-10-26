@@ -308,5 +308,60 @@ a.botao-comprar:hover,
   margin-bottom: 0.5rem;
   color: var(--text);
 }
+/* === AJUSTE DE TÍTULOS E FICHAS – LIVROS & CAFÉS === */
+.resenha-unica h2,
+.dados-livro h2,
+.dados-cafe h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.6rem;
+  line-height: 1.3;
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--accent);
+  text-shadow: none; /* remove sombra dourada que pesa em textos longos */
+}
+
+/* Destaques em itálico nos títulos */
+.dados-livro h2 em,
+.dados-cafe h2 em {
+  font-style: italic;
+  font-weight: 600;
+}
+
+/* Textos dentro das fichas */
+.dados-livro p,
+.dados-cafe p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+/* Mantém boa proporção e conforto visual nas páginas individuais */
+.resenha-unica,
+.cafe-unico {
+  max-width: 1200px;  /* limita largura em monitores grandes */
+  margin: 0 auto;
+}
+
+/* === AJUSTE TIPOGRÁFICO PARA TELAS MUITO GRANDES (≥1600px) === */
+@media (min-width: 1600px) {
+  .resenha-unica h2,
+  .dados-livro h2,
+  .dados-cafe h2 {
+    font-size: 1.4rem;  /* ligeiramente menor para monitores grandes */
+  }
+
+  .dados-livro p,
+  .dados-cafe p {
+    font-size: 0.9rem;  /* ajuste fino de leitura */
+  }
+
+  .resenha-unica,
+  .cafe-unico {
+    max-width: 1100px; /* evita que o texto se espalhe demais */
+  }
+}
 
 
