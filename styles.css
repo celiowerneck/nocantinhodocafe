@@ -420,5 +420,83 @@ main,
     padding-top: 20px;
   }
 }
+/* === LAYOUT HORIZONTAL PARA CARDS DE LIVROS & CAFÉS === */
+.card-livro {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: var(--card);
+  border-radius: 12px;
+  padding: 24px;
+  gap: 2rem; /* espaço entre imagem e texto */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  max-width: 950px;
+  margin: 0 auto 40px auto;
+}
+
+.card-livro:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+}
+
+.capa-livro {
+  width: 180px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+.texto-card {
+  text-align: left;
+  color: var(--text);
+  flex: 1;
+}
+
+.texto-card h3 {
+  font-family: 'Playfair Display', serif;
+  color: var(--accent);
+  margin-top: 0;
+  font-size: 1.3rem;
+}
+
+.texto-card p {
+  margin: 0.4rem 0 0.8rem;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+a.botao-comprar {
+  display: inline-block;
+  background-color: var(--accent);
+  color: #2A211B;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+a.botao-comprar:hover {
+  background-color: #e8d18a;
+  color: #1A100C;
+}
+
+/* === RESPONSIVO === */
+@media (max-width: 800px) {
+  .card-livro {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .capa-livro {
+    width: 70%;
+    margin-bottom: 1rem;
+  }
+
+  .texto-card {
+    text-align: center;
+  }
+}
 
 
