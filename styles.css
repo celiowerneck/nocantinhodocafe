@@ -312,5 +312,30 @@ header nav {
   position: relative;
   z-index: 2;
 }
+/* === RESPIRO ENTRE CABEÇALHO E CONTEÚDO === */
+main,
+.resenha-unica,
+.catalogo-livros,
+.feed-coluna {
+  margin-top: 60px; /* cria espaço confortável abaixo do banner */
+}
+
+/* Ajuste específico para resenhas e páginas internas */
+.resenha-unica {
+  padding-top: 40px;
+}
+
+/* Em telas menores, reduza o espaçamento para não “empurrar” demais */
+@media (max-width: 768px) {
+  main,
+  .resenha-unica,
+  .catalogo-livros,
+  .feed-coluna {
+    margin-top: 40px;
+  }
+  .resenha-unica {
+    padding-top: 20px;
+  }
+}
 
 
