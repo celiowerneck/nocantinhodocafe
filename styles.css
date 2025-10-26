@@ -630,6 +630,77 @@ h2 {
   max-width: 1000px;
   justify-items: center;
 }
+/* === SEÇÕES DE CATÁLOGO (Livros e Cafés) === */
+.catalogo-livros {
+  display: grid;
+  place-items: center; /* centraliza horizontal e verticalmente */
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.catalogo-livros h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  color: #d9a744;
+  margin-bottom: 10px;
+}
+
+.catalogo-livros .intro-livros {
+  max-width: 800px;
+  font-family: "Lora", serif;
+  color: #d7c6a4;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+/* === GRID DOS CARDS === */
+.lista-livros {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  width: 100%;
+  max-width: 1000px;
+  justify-items: center;
+}
+
+/* === AJUSTE ESTÉTICO DOS CARDS === */
+.card-livro {
+  background: #2a201b;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.card-livro:hover {
+  transform: translateY(-5px);
+}
+
+.capa-livro {
+  width: 180px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.texto-card {
+  text-align: center;
+  color: #d7c6a4;
+}
+
+.botao-comprar {
+  display: inline-block;
+  margin-top: 10px;
+  color: #d9a744;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.botao-comprar:hover {
+  text-decoration: underline;
+}
 
 
 
