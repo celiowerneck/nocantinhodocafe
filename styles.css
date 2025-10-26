@@ -599,6 +599,37 @@ h2 {
   margin: 10px auto 40px auto; /* centraliza horizontalmente */
   line-height: 1.6;
 }
+.catalogo-livros {
+  display: grid;
+  place-items: center; /* centraliza vertical e horizontalmente */
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.catalogo-livros h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  color: #d9a744;
+  margin-bottom: 10px;
+}
+
+.catalogo-livros .intro-livros {
+  max-width: 800px;
+  font-family: "Lora", serif;
+  color: #d7c6a4;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+/* Mantém a grade dos cards */
+.lista-livros {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  width: 100%;
+  max-width: 1000px;
+  justify-items: center;
+}
 
 
 
