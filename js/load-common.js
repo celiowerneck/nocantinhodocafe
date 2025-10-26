@@ -2,25 +2,36 @@ document.addEventListener("DOMContentLoaded", async () => {
   const header = document.getElementById("header");
   const footer = document.getElementById("footer");
 
-  // Caminhos possíveis (tentaremos ambos automaticamente)
+  // caminhos que você já estava usando
   const caminhosPossiveis = ["./", "../", "../../"];
 
-  async function carregarElemento(elemento, arquivo) {
-    for (const caminho of caminhosPossiveis) {
-      try {
-        const resposta = await fetch(caminho + arquivo);
-        if (resposta.ok) {
-          elemento.innerHTML = await resposta.text();
-          return; // sucesso, para de procurar
-        }
-      } catch (_) {
-        // tenta o próximo caminho
-      }
+  // opcional: deixe true só durante desenvolvimento
+  const DEV_NO_CACHE = false;
+
+  async function carregarElemento(el, arquivo) {
+    if (!el) return;
+
+    // monta todas as tentativas de fetch em paralelo
+    const tentativas = caminhosPossiveis.map((base) =>
+      fetch(base + arquivo, {
+        credentials: "same-origin",
+        cache: DEV_NO_CACHE ? "no-store" : "default",
+      }).then((r) => (r.ok ? r.text() : Promise.reject()))
+    );
+
+    try {
+      // usa a primeira que der certo
+      const html = await Promise.any(tentativas);
+      el.innerHTML = html;
+    } catch {
+      console.warn(`⚠️ Não foi possível carregar ${arquivo} de: ${caminhosPossiveis.join(", ")}`);
     }
-    console.warn(`⚠️ Não foi possível carregar ${arquivo}`);
   }
 
-  if (header) await carregarElemento(header, "header.html");
-  if (footer) await carregarElemento(footer, "footer.html");
+  await Promise.all([
+    carregarElemento(header, "header.html"),
+    carregarElemento(footer, "footer.html"),
+  ]);
 });
+
 
