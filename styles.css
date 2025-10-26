@@ -1,2 +1,198 @@
-429: Too Many Requests
-For more on scraping GitHub and how it may affect your rights, please review our Terms of Service (https://docs.github.com/en/site-policy/github-terms/github-terms-of-service).
+/* =========================================================
+ 🌿 NO CANTINHO DO CAFÉ — CSS LIMPO E UNIFICADO
+ Layout responsivo e modular para Livros, Cafés e Resenhas
+========================================================= */
+
+/* 🎨 PALETA E VARIÁVEIS DE COR */
+:root {
+  --bg: #2A211B;
+  --card: #3A2F28;
+  --text: #F5EBDD;
+  --accent: #D9A744;
+  --border: #4C3E36;
+  --subtle: #C3B299;
+}
+
+/* =========================================================
+ 🧱 BASE GLOBAL
+========================================================= */
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Lora', serif;
+  margin: 0;
+  line-height: 1.7;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: var(--accent);
+  margin: 0;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #e8d18a;
+}
+
+/* =========================================================
+ 📰 SEÇÕES GERAIS
+========================================================= */
+main {
+  margin-top: 60px;
+}
+
+.secao-titulo {
+  text-align: center;
+  margin-top: 40px;
+  padding: 0 20px;
+}
+
+.secao-titulo h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.secao-titulo p {
+  max-width: 850px;
+  margin: 0 auto;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+/* =========================================================
+ 📚 CATÁLOGOS (Livros / Cafés / E-books)
+========================================================= */
+.catalogo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px 80px;
+}
+
+.catalogo .lista {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* =========================================================
+ 🧩 CARD BASE — usado em Livros e Cafés
+========================================================= */
+.card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2.5rem;
+  width: 100%;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
+}
+
+/* 📸 IMAGEM DO CARD */
+.card img {
+  width: 220px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  object-fit: cover;
+}
+
+/* 📝 CONTEÚDO DO CARD */
+.card-content {
+  flex: 1;
+  color: var(--text);
+}
+
+.card-content h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-content p {
+  margin: 0.4rem 0 0.8rem;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* =========================================================
+ 🔘 BOTÕES PADRÃO
+========================================================= */
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 10px 16px;
+  background-color: var(--accent);
+  color: var(--bg);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #e8d18a;
+  color: #1A100C;
+}
+
+/* =========================================================
+ 📖 RESENHAS E CONTEÚDOS INTERNOS
+========================================================= */
+.resenha-unica {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 20px;
+  line-height: 1.8;
+  color: var(--text);
+}
+
+.resenha-unica img {
+  width: 100%;
+  border-radius: 12px;
+  margin: 20px 0;
+}
+
+/* =========================================================
+ 📱 RESPONSIVIDADE
+========================================================= */
+@media (max-width: 900px) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 24px;
+  }
+
+  .card img {
+    width: 70%;
+    margin-bottom: 1rem;
+  }
+
+  .card-content {
+    text-align: center;
+  }
+
+  .card-content h3 {
+    font-size: 1.4rem;
+  }
+
+  .resenha-unica {
+    margin: 40px auto;
+    padding: 16px;
+  }
+}
