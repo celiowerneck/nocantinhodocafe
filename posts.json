@@ -16,6 +16,22 @@
     "categoria": "Café"
   },
   {
+  "titulo": "Factfulness",
+  "autor": "Hans Rosling",
+  "descricao": "Dez razões pelas quais estamos sistematicamente errados sobre o mundo — e por que as coisas estão melhores do que nossos instintos dramáticos nos fazem acreditar.",
+  "imagem": "IMG/factfulness.jpg",
+  "link": "reviews/factfulness.html",
+  "categoria": "Livro"
+},
+  {
+  "titulo": "Café Santa Monica Gourmet",
+  "autor": "Machado, Sul de Minas Gerais",
+  "descricao": "Café 100% arábica com 82+ pontos SCA. Corpo encorpado, notas de chocolate e caramelo, baixa acidez e doçura natural. Um gourmet confiável que entrega o que promete.",
+  "imagem": "IMG/cafe-santa-monica.jpg",
+  "link": "reviews/santa-monica.html",
+  "categoria": "Café"
+},
+  {
     "titulo": "A Pausa Entre os Goles",
     "autor": "Crônica original",
     "descricao": "Uma reflexão sobre o tempo, o aroma do café e os intervalos que nos reconectam com o essencial.",
