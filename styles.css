@@ -699,5 +699,111 @@ a.botao-comprar:hover {
     grid-template-columns: 1fr;
   }
 }
+/* ===========================
+   PALETA / TOKENS
+=========================== */
+:root{
+  --bg-page: #f4efe9;
+  --card: #2e241f;         /* marrom café */
+  --card-ink: #eae0d6;     /* texto claro em card escuro */
+  --ink: #2c2320;          /* texto principal */
+  --muted: #6a5e58;
+  --accent: #d6b57b;       /* dourado suave */
+  --accent-2: #b8975d;
+  --border: rgba(0,0,0,.08);
+  --radius: 14px;
+  --shadow: 0 10px 24px rgba(0,0,0,.15);
+}
+
+/* fundo geral */
+body{ background: var(--bg-page); color: var(--ink); }
+
+/* ===========================
+   GRID DUPLO (livros | cafés)
+=========================== */
+.grid-principal{
+  display:grid; grid-template-columns: 1fr 1fr;
+  gap:42px; padding:40px 5%;
+}
+
+/* blocos-coluna */
+.coluna-livros, .coluna-cafes{
+  background: var(--card);
+  color: var(--card-ink);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding:26px;
+}
+
+/* títulos das colunas */
+.coluna-livros h2, .coluna-cafes h2{
+  font-family:"Playfair Display", serif;
+  letter-spacing:.3px;
+  margin:0 0 18px;
+  color: var(--card-ink);
+  opacity:.92;
+}
+
+/* pilha de cards dentro das colunas */
+.grid-livros, .grid-cafes{ display:flex; flex-direction:column; gap:22px; }
+
+/* ===========================
+   CARD (post)
+=========================== */
+.post{
+  background:#fff;
+  border-radius: var(--radius);
+  overflow:hidden;
+  box-shadow: 0 4px 14px rgba(0,0,0,.10);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.post:hover{ transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,.16); }
+
+/* ---- THUMB UNIVERSAL (corrige bagunça) ---- */
+.post .thumb, .card-livro .capa-livro{
+  display:block; width:100%;
+  height:320px;                /* padrão único */
+  object-fit: cover;           /* corta sem deformar */
+  object-position: center;
+  background:#ddd;             /* fallback */
+}
+
+/* hard reset contra regras antigas que esticavam imagens */
+img.thumb, img.capa-livro{ max-width:100% !important; height:auto; }
+.post .thumb, .card-livro .capa-livro{ height:320px !important; } /* mantém altura padrão */
+
+/* conteúdo do card */
+.post .conteudo{ padding:18px 20px 22px; }
+.post h3{ margin:0 0 8px; font-family:"Playfair Display", serif; font-size:1.2rem; }
+.post p{ margin:0 0 10px; color: var(--muted); line-height:1.55; }
+
+/* links */
+.post a{ text-decoration:none; }
+.post h3 a{
+  color: var(--ink); border-bottom:1px solid transparent;
+}
+.post h3 a:hover{ border-bottom-color: var(--accent); }
+
+/* botões */
+.lermais, .botao-comprar{
+  display:inline-block; margin-top:6px; padding:8px 14px;
+  background: var(--accent); color:#fff; border-radius:8px;
+  font-weight:600; letter-spacing:.2px;
+}
+.lermais:hover, .botao-comprar:hover{ background: var(--accent-2); }
+
+/* divisor sutil entre imagem e texto (somente na coluna cafés/livros escuros) */
+.coluna-livros .post, .coluna-cafes .post{ border:1px solid var(--border); }
+
+/* ===========================
+   RESPONSIVO
+=========================== */
+@media (max-width: 1080px){
+  .grid-principal{ grid-template-columns:1fr; gap:28px; }
+}
+@media (max-width: 520px){
+  .post .thumb, .card-livro .capa-livro{ height:260px !important; }
+  .post h3{ font-size:1.1rem; }
+}
 
 
