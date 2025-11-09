@@ -973,5 +973,55 @@ img.thumb, img.capa-livro{ max-width:100% !important; height:auto; }
     padding: 18px 22px;
   }
 }
+/* ===========================
+   FUNDO GERAL / GRID WRAPPER
+=========================== */
+
+/* fundo da página */
+body {
+  background-color: #d9cbb8;   /* bege amendoado escuro */
+  color: #3b2b22;
+}
+
+/* seção principal */
+.grid-principal {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 50px 6%;
+  background-color: #d9cbb8;   /* mesmo tom do body */
+}
+
+/* colunas (blocos Livros e Cafés) */
+.coluna-livros,
+.coluna-cafes {
+  background-color: #2e241f;   /* marrom café intenso */
+  border-radius: 14px;
+  box-shadow: 0 6px 22px rgba(0,0,0,0.25);
+  padding: 28px;
+}
+
+/* títulos das colunas */
+.coluna-livros h2,
+.coluna-cafes h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #f2e6d8;              /* texto claro */
+  margin-bottom: 20px;
+  letter-spacing: 0.3px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* responsivo */
+@media (max-width: 980px) {
+  .grid-principal {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 40px 5%;
+  }
+}
 
 
