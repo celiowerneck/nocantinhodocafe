@@ -1060,5 +1060,78 @@ body {
 #footer a:hover {
   color: #b8975d;            /* dourado suave no hover */
 }
+/* ==============
+   LAYOUT: Páginas Livros & Cafés
+   - duas colunas lado a lado (desktop)
+   - uma coluna no mobile
+   - usa o mesmo card horizontal já criado (thumb esquerda)
+================ */
+
+/* escopo: só livros e cafés */
+.page-livros .grid-colecao,
+.page-cafes .grid-colecao{
+  padding: 44px 6%;
+}
+
+.page-livros .grid-colecao h2,
+.page-cafes .grid-colecao h2{
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 1.9rem;
+  margin: 0 0 18px;
+  color: #3b2b22;
+}
+
+/* mural em colunas */
+.page-livros .mural-cards,
+.page-cafes  .mural-cards{
+  display: grid;
+  grid-template-columns: 1fr 1fr;  /* privilégio ao lado a lado */
+  gap: 24px;
+}
+
+/* garante o card horizontal com thumb vertical à esquerda */
+.page-livros .mural-cards .post,
+.page-cafes  .mural-cards .post{
+  display: flex;
+  background: #f2e6d8;            /* marrom-claro */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0,0,0,.12);
+}
+
+.page-livros .mural-cards .post .thumb,
+.page-cafes  .mural-cards .post .thumb{
+  width: 40%;
+  aspect-ratio: 3/4;               /* verticalizado */
+  object-fit: cover;
+  border-right: 1px solid rgba(0,0,0,.08);
+}
+
+.page-livros .mural-cards .post .conteudo,
+.page-cafes  .mural-cards .post .conteudo{
+  flex: 1;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #3b2b22;
+}
+
+/* responsividade: no mobile vira 1 coluna */
+@media (max-width: 900px){
+  .page-livros .mural-cards,
+  .page-cafes  .mural-cards{
+    grid-template-columns: 1fr;
+  }
+  .page-livros .mural-cards .post .thumb,
+  .page-cafes  .mural-cards .post .thumb{
+    width: 100%;
+    height: 320px;
+    aspect-ratio: auto;
+    border-right: none;
+    border-bottom: 1px solid rgba(0,0,0,.08);
+  }
+}
 
 
