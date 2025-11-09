@@ -1023,5 +1023,42 @@ body {
     padding: 40px 5%;
   }
 }
+/* ===========================
+   RODAPÉ — tons café
+=========================== */
+#footer {
+  background-color: #d9cbb8; /* fundo igual ao corpo */
+  text-align: center;
+  padding: 28px 0 40px;
+  font-family: 'Lora', serif;
+  color: #3b2b22;            /* marrom escuro */
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+#footer p {
+  margin: 4px 0;
+  font-size: 0.95rem;
+  color: #3b2b22;            /* mantém marrom escuro */
+}
+
+#footer strong {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  color: #3b2b22;            /* mesmo tom */
+}
+
+#footer em {
+  color: #3b2b22;
+  font-style: italic;
+}
+
+#footer a {
+  color: #3b2b22;
+  text-decoration: none;
+}
+
+#footer a:hover {
+  color: #b8975d;            /* dourado suave no hover */
+}
 
 
