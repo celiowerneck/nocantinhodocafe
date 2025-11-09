@@ -805,5 +805,87 @@ img.thumb, img.capa-livro{ max-width:100% !important; height:auto; }
   .post .thumb, .card-livro .capa-livro{ height:260px !important; }
   .post h3{ font-size:1.1rem; }
 }
+/* ===========================
+   CARD HORIZONTAL (thumb esquerda, texto direita)
+=========================== */
+.post {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.15);
+}
+
+/* --- imagem vertical à esquerda --- */
+.post .thumb {
+  width: 38%;               /* proporção visual agradável */
+  height: auto;
+  aspect-ratio: 3/4;        /* verticalizado */
+  object-fit: cover;
+  object-position: center;
+  border-right: 1px solid #eee;
+}
+
+/* --- conteúdo à direita --- */
+.post .conteudo {
+  flex: 1;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.post h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+}
+
+.post p {
+  font-family: 'Lora', serif;
+  color: #333;
+  line-height: 1.55;
+  margin-bottom: 10px;
+}
+
+.post .lermais {
+  align-self: flex-start;
+  background-color: #d6b57b;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.post .lermais:hover {
+  background-color: #b8975d;
+}
+
+/* --- responsividade --- */
+@media (max-width: 780px) {
+  .post {
+    flex-direction: column;
+  }
+  .post .thumb {
+    width: 100%;
+    height: 320px;
+    aspect-ratio: auto;
+    border-right: none;
+    border-bottom: 1px solid #eee;
+  }
+  .post .conteudo {
+    padding: 18px 20px;
+  }
+}
 
 
