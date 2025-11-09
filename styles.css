@@ -1,31 +1,37 @@
-/* === VARIÁVEIS DE COR === */
+/* ===============================
+   THEME: NO CANTINHO DO CAFÉ ☕
+   Versão unificada e otimizada
+=================================*/
+
+/* --------- PALETA DE CORES --------- */
 :root {
-  --bg: #2A211B;         /* fundo principal */
-  --card: #3A2F28;       /* blocos e seções */
-  --text: #F5EBDD;       /* texto principal */
-  --accent: #D9A744;     /* dourado para títulos e destaques */
-  --border: #4C3E36;     /* linhas sutis */
-  --subtle: #C3B299;     /* texto secundário */
+  --bg-page: #d9cbb8;
+  --card: #2e241f;
+  --card-ink: #eae0d6;
+  --ink: #3b2b22;
+  --muted: #6a5e58;
+  --accent: #d6b57b;
+  --accent-2: #b8975d;
+  --border: rgba(0, 0, 0, 0.08);
+  --radius: 14px;
+  --shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
 }
 
-/* === BASE GERAL === */
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
-  background-color: var(--bg);
-  color: var(--text);
+/* --------- BASE --------- */
+body {
+  background: var(--bg-page);
+  color: var(--ink);
   font-family: 'Lora', serif;
-  line-height: 1.75;
+  line-height: 1.6;
+  margin: 0;
 }
 
-/* === CABEÇALHO / HERO === */
+/* --------- HEADER --------- */
 header {
   position: relative;
   width: 100%;
   height: 320px;
-  background: url("IMG/banner-cafe.jpg") center -560px / cover no-repeat;
+  background: url("IMG/banner-ultra-novo.jpg") center center/cover no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,9 +39,8 @@ header {
   color: #fff;
   text-align: center;
   font-family: 'Playfair Display', serif;
-  overflow: hidden;
+  filter: sepia(0) contrast(1.05) brightness(0.9);
 }
-
 header::before {
   content: "";
   position: absolute;
@@ -43,979 +48,53 @@ header::before {
   background: rgba(0, 0, 0, 0.35);
   z-index: 1;
 }
-
-header h1 {
-  position: relative;
-  z-index: 2;
-  font-size: 2.8rem;
-  color: var(--accent);
-  margin: 0;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-}
-
-header p {
-  position: relative;
-  z-index: 2;
-  font-style: italic;
-  margin-top: 10px;
-  color: #f0f0e6;
-}
-
-/* === MENU PRINCIPAL === */
-nav {
-  position: absolute;
-  bottom: 20px;
-  width: 100%;
-  text-align: center;
-  z-index: 2;
-}
-
-nav a {
-  color: var(--accent);
-  text-decoration: none;
-  font-weight: 600;
-  margin: 0 1rem;
-  padding: 0.4rem 0.8rem;
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 6px;
-  transition: background 0.3s ease;
-}
-
-nav a:hover { background: rgba(0, 0, 0, 0.6); }
-
-/* === CONTEÚDO PRINCIPAL === */
-main {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  padding: 0 3rem 3rem;
-}
-
-section {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.25);
-  transition: transform 0.3s ease;
-}
-section:hover { transform: translateY(-4px); }
-
-/* === TÍTULOS === */
-h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  color: var(--accent);
-  text-align: center;
-  margin: 2rem auto 1rem;
-  letter-spacing: 0.5px;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
-}
-
-/* === RODAPÉ === */
-footer {
-  text-align: center;
-  padding: 2rem;
-  border-top: 1px solid var(--border);
-  color: var(--subtle);
-  font-size: 0.95rem;
-}
-
-/* === ÍCONE XÍCARA === */
-.logo {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-}
-
-.cup-icon {
-  width: 40px;
-  height: 40px;
-  border: 2px solid var(--accent);
-  border-radius: 4px 4px 12px 12px;
-  background: linear-gradient(to bottom, #3A2F28 50%, #2A211B 50%);
-  position: relative;
-}
-.cup-icon::before {
-  content: '';
-  position: absolute;
-  top: -10px;
-  left: 12px;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  border: 2px solid var(--accent);
-  border-bottom: none;
-  border-left: none;
-  transform: rotate(45deg);
-}
-.steam {
-  position: absolute;
-  top: -18px;
-  left: 15px;
-  width: 8px;
-  height: 18px;
-  border-left: 2px solid rgba(213,191,162,0.5);
-  border-radius: 50%;
-  animation: steamUp 3s ease-in-out infinite;
-}
-@keyframes steamUp {
-  0% { transform: translateY(0); opacity: 1; }
-  100% { transform: translateY(-20px); opacity: 0; }
-}
-
-/* === BOTÕES === */
-a.botao-comprar,
-.ler-mais,
-.feed-posts .lermais {
-  display: inline-block;
-  padding: 0.6rem 1.2rem;
-  background: var(--accent);
-  color: var(--bg);
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background 0.3s ease, color 0.3s ease;
-  margin-top: 1rem;
-}
-
-a.botao-comprar:hover,
-.ler-mais:hover,
-.feed-posts .lermais:hover {
-  background: #e8d18a;
-  color: var(--bg);
-}
-
-/* === CATÁLOGO DE LIVROS E CAFÉS === */
-.secao-titulo {
-  display: grid;
-  place-items: center;
-  text-align: center;
-  padding: 32px 16px 20px;
-}
-.secao-titulo h2 {
-  color: var(--accent);
-  margin-bottom: 10px;
-}
-.secao-titulo .intro-secao {
-  max-width: 900px;
-  line-height: 1.6;
-  color: var(--text);
-  margin: 0;
-}
-
-.catalogo-livros {
-  display: grid;
-  place-items: center;
-  text-align: center;
-  padding: 0 16px 40px;
-}
-.lista-livros {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  justify-items: center;
-}
-
-/* === CARDS === */
-.card-livro {
-  background: var(--card);
-  border-radius: 10px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-  transition: transform 0.2s ease;
-}
-.card-livro:hover { transform: translateY(-5px); }
-
-.capa-livro {
-  width: 180px;
-  border-radius: 6px;
-  margin-bottom: 15px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.25);
-}
-
-.texto-card {
-  text-align: center;
-  color: var(--text);
-}
-
-/* === FEED DE POSTS / BLOG === */
-.feed-posts {
-  max-width: 1000px;
-  margin: 3rem auto;
-  background: var(--card);
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-  padding: 2rem;
-}
-.feed-posts h2 { color: var(--accent); text-align: center; margin-bottom: 2rem; }
-.feed-posts .post {
-  display: flex;
-  align-items: center;
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 1.2rem;
-  margin-bottom: 1.5rem;
-  transition: transform 0.2s ease;
-}
-.feed-posts .post:hover { transform: translateY(-4px); }
-.feed-posts .thumb { width: 140px; height: 140px; object-fit: cover; border-radius: 8px; margin-right: 1.5rem; }
-.feed-posts .conteudo h3 a { color: var(--accent); text-decoration: none; font-family: 'Playfair Display', serif; }
-.feed-posts .conteudo h3 a:hover { color: #f0d88f; }
-.feed-posts .conteudo p { color: var(--text); line-height: 1.6; }
-
-/* === RESPONSIVIDADE === */
-@media (max-width: 900px) {
-  main { grid-template-columns: 1fr; padding: 0 1.5rem 3rem; }
-  header { height: 220px; padding-bottom: 30px; }
-  header h1 { font-size: 2rem; }
-  .post { flex-direction: column; align-items: flex-start; }
-  .post img { width: 100%; height: 200px; border-radius: 8px 8px 0 0; }
-}
-/* === CABEÇALHO PRINCIPAL === */
-header {
-  position: relative;
-  width: 100%;
-  height: 320px; /* ajuste conforme desejar */
-  background: url("IMG/banner-ultra-novo.jpg") center center / cover no-repeat;
-  background-attachment: scroll;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  text-align: center;
-  font-family: 'Playfair Display', serif;
-  overflow: hidden;
-  filter: sepia(0.00) contrast(1.05) brightness(0.9); /* garante o clima sépia */
-}
-
-header::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.35); /* leve escurecimento para contraste do texto */
-  z-index: 1;
-}
-
 header h1,
 header p,
 header nav {
   position: relative;
   z-index: 2;
 }
-/* === RESPIRO ENTRE CABEÇALHO E CONTEÚDO === */
-main,
-.resenha-unica,
-.catalogo-livros,
-.feed-coluna {
-  margin-top: 60px; /* cria espaço confortável abaixo do banner */
-}
-
-/* Ajuste específico para resenhas e páginas internas */
-.resenha-unica {
-  padding-top: 40px;
-}
-
-/* Em telas menores, reduza o espaçamento para não “empurrar” demais */
-@media (max-width: 768px) {
-  main,
-  .resenha-unica,
-  .catalogo-livros,
-  .feed-coluna {
-    margin-top: 40px;
-  }
-  .resenha-unica {
-    padding-top: 20px;
-  }
-}
-/* === LAYOUT HORIZONTAL PARA CARDS DE LIVROS & CAFÉS === */
-.card-livro {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  background: var(--card);
-  border-radius: 12px;
-  padding: 24px;
-  gap: 2rem; /* espaço entre imagem e texto */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
-  max-width: 950px;
-  margin: 0 auto 40px auto;
-}
-
-.card-livro:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
-}
-
-.capa-livro {
-  width: 180px;
-  flex-shrink: 0;
-  border-radius: 8px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
-}
-
-.texto-card {
-  text-align: left;
-  color: var(--text);
-  flex: 1;
-}
-
-.texto-card h3 {
-  font-family: 'Playfair Display', serif;
+header h1 {
+  margin: 0;
+  font-size: 2.6rem;
   color: var(--accent);
-  margin-top: 0;
-  font-size: 1.3rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
-
-.texto-card p {
-  margin: 0.4rem 0 0.8rem;
-  line-height: 1.6;
-  font-size: 1rem;
-}
-
-a.botao-comprar {
-  display: inline-block;
-  background-color: var(--accent);
-  color: #2A211B;
-  font-weight: 600;
-  text-decoration: none;
-  padding: 8px 14px;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-}
-
-a.botao-comprar:hover {
-  background-color: #e8d18a;
-  color: #1A100C;
-}
-
-/* === RESPONSIVO === */
-@media (max-width: 800px) {
-  .card-livro {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .capa-livro {
-    width: 70%;
-    margin-bottom: 1rem;
-  }
-
-  .texto-card {
-    text-align: center;
-  }
-}
-/* ===== AJUSTE DE LAYOUT DOS CARDS ===== */
-.card-livro {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 40px;
-  background: #2b211b;
-  color: #fffbe9;
-  border-radius: 12px;
-  padding: 40px;
-  margin: 40px auto;
-  max-width: 1000px;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
-}
-
-.card-livro img.capa-livro {
-  width: 220px;
-  height: auto;
-  border-radius: 8px;
-  flex-shrink: 0;
-}
-
-.texto-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex: 1;
-}
-
-.texto-card h3 {
-  font-family: "Playfair Display", serif;
-  font-size: 1.6rem;
-  color: #d9a744;
-  margin-bottom: 10px;
-}
-
-.texto-card p {
-  font-size: 1rem;
-  color: #f5f2ec;
-  margin-bottom: 10px;
-}
-
-.botao-comprar {
-  align-self: flex-start;
-  background: #d9a744;
-  color: #2b211b;
-  padding: 10px 20px;
-  border-radius: 6px;
-  font-weight: 600;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.botao-comprar:hover {
-  background: #f0c86d;
-  transform: translateY(-2px);
-}
-
-/* ===== RESPONSIVO ===== */
-@media (max-width: 768px) {
-  .card-livro {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 25px;
-  }
-
-  .card-livro img.capa-livro {
-    width: 60%;
-    margin-bottom: 20px;
-  }
-
-  .texto-card {
-    align-items: center;
-  }
-
-  .botao-comprar {
-    align-self: center;
-  }
-}
-/* ===== ESTILO DAS PÁGINAS DE RESENHA ===== */
-
-.resenha-container {
-  max-width: 1000px;
-  margin: 60px auto;
-  background: #2b211b;
-  color: #f5f2ec;
-  border-radius: 16px;
-  padding: 40px 60px;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
-  border: 1px solid rgba(217, 167, 68, 0.2);
-}
-
-.resenha-container h1 {
-  font-family: "Playfair Display", serif;
-  font-size: 2rem; /* antes era muito grande */
-  color: #d9a744;
-  text-align: center;
-  margin-bottom: 25px;
-  line-height: 1.3;
-}
-
-.resenha-container h2 {
-  font-family: "Lora", serif;
-  color: #f0d8a8;
-  font-size: 1.2rem;
-  margin-top: 25px;
-  margin-bottom: 10px;
-}
-
-.resenha-container p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #f5f2ec;
-  margin-bottom: 15px;
-}
-
-.resenha-container ul {
-  margin-left: 20px;
-  margin-bottom: 20px;
-}
-
-.resenha-container li {
-  margin-bottom: 8px;
-}
-
-/* Destaques sutis */
-.resenha-container em {
-  color: #eacb84;
-}
-
-.resenha-container strong {
-  color: #fff5c4;
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-  .resenha-container {
-    padding: 25px;
-  }
-
-  .resenha-container h1 {
-    font-size: 1.6rem;
-  }
-}
-/* --- PADRONIZAÇÃO DE CARDS DE LIVROS E CAFÉS --- */
-.card-livro, .post {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card-livro:hover, .post:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-}
-
-/* --- PADRÃO DE IMAGEM --- */
-.capa-livro, .thumb {
-  width: 100%;
-  height: 320px;
-  object-fit: cover;
-  object-position: center;
-  border-bottom: 1px solid #ddd;
-}
-
-/* --- TEXTO INTERNO --- */
-.texto-card, .conteudo {
-  padding: 16px 18px;
-  text-align: left;
-}
-
-.texto-card h3, .conteudo h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
-}
-
-.texto-card p, .conteudo p {
-  font-family: 'Lora', serif;
-  font-size: 0.95rem;
-  line-height: 1.5;
-  color: #333;
-}
-
-/* --- BOTÃO DE LEITURA --- */
-.botao-comprar, .lermais {
-  display: inline-block;
-  margin-top: 8px;
-  padding: 8px 14px;
-  background-color: #d6b57b;
-  color: #fff;
-  border-radius: 6px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background-color 0.2s ease;
-}
-
-.botao-comprar:hover, .lermais:hover {
-  background-color: #b8975d;
-}
-/* --- GRID PRINCIPAL --- */
-.grid-principal {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  padding: 40px 5%;
-  background-color: #faf8f5;
-}
-
-/* --- COLUNAS --- */
-.coluna-livros, .coluna-cafes {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.coluna-livros h2, .coluna-cafes h2 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 600;
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-  color: #3c2f2f;
-}
-
-/* --- GRID INTERNO DE CARDS --- */
-.grid-livros, .grid-cafes {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-/* --- RESPONSIVIDADE --- */
-@media (max-width: 980px) {
-  .grid-principal {
-    grid-template-columns: 1fr;
-  }
-  .coluna-livros, .coluna-cafes {
-    align-items: center;
-  }
-  .grid-livros, .grid-cafes {
-    width: 100%;
-    max-width: 600px;
-  }
-}
-.grid-principal {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  padding: 40px 5%;
-  background-color: #faf8f5;
-}
-
-.coluna-livros, .coluna-cafes {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.coluna-livros h2, .coluna-cafes h2 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 600;
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-  color: #3c2f2f;
-}
-
-.grid-livros, .grid-cafes {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-/* Responsividade */
-@media (max-width: 980px) {
-  .grid-principal {
-    grid-template-columns: 1fr;
-  }
-}
-/* ===========================
-   PALETA / TOKENS
-=========================== */
-:root{
-  --bg-page: #f4efe9;
-  --card: #2e241f;         /* marrom café */
-  --card-ink: #eae0d6;     /* texto claro em card escuro */
-  --ink: #2c2320;          /* texto principal */
-  --muted: #6a5e58;
-  --accent: #d6b57b;       /* dourado suave */
-  --accent-2: #b8975d;
-  --border: rgba(0,0,0,.08);
-  --radius: 14px;
-  --shadow: 0 10px 24px rgba(0,0,0,.15);
-}
-
-/* fundo geral */
-body{ background: var(--bg-page); color: var(--ink); }
-
-/* ===========================
-   GRID DUPLO (livros | cafés)
-=========================== */
-.grid-principal{
-  display:grid; grid-template-columns: 1fr 1fr;
-  gap:42px; padding:40px 5%;
-}
-
-/* blocos-coluna */
-.coluna-livros, .coluna-cafes{
-  background: var(--card);
-  color: var(--card-ink);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding:26px;
-}
-
-/* títulos das colunas */
-.coluna-livros h2, .coluna-cafes h2{
-  font-family:"Playfair Display", serif;
-  letter-spacing:.3px;
-  margin:0 0 18px;
-  color: var(--card-ink);
-  opacity:.92;
-}
-
-/* pilha de cards dentro das colunas */
-.grid-livros, .grid-cafes{ display:flex; flex-direction:column; gap:22px; }
-
-/* ===========================
-   CARD (post)
-=========================== */
-.post{
-  background:#fff;
-  border-radius: var(--radius);
-  overflow:hidden;
-  box-shadow: 0 4px 14px rgba(0,0,0,.10);
-  transition: transform .18s ease, box-shadow .18s ease;
-}
-.post:hover{ transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,.16); }
-
-/* ---- THUMB UNIVERSAL (corrige bagunça) ---- */
-.post .thumb, .card-livro .capa-livro{
-  display:block; width:100%;
-  height:320px;                /* padrão único */
-  object-fit: cover;           /* corta sem deformar */
-  object-position: center;
-  background:#ddd;             /* fallback */
-}
-
-/* hard reset contra regras antigas que esticavam imagens */
-img.thumb, img.capa-livro{ max-width:100% !important; height:auto; }
-.post .thumb, .card-livro .capa-livro{ height:320px !important; } /* mantém altura padrão */
-
-/* conteúdo do card */
-.post .conteudo{ padding:18px 20px 22px; }
-.post h3{ margin:0 0 8px; font-family:"Playfair Display", serif; font-size:1.2rem; }
-.post p{ margin:0 0 10px; color: var(--muted); line-height:1.55; }
-
-/* links */
-.post a{ text-decoration:none; }
-.post h3 a{
-  color: var(--ink); border-bottom:1px solid transparent;
-}
-.post h3 a:hover{ border-bottom-color: var(--accent); }
-
-/* botões */
-.lermais, .botao-comprar{
-  display:inline-block; margin-top:6px; padding:8px 14px;
-  background: var(--accent); color:#fff; border-radius:8px;
-  font-weight:600; letter-spacing:.2px;
-}
-.lermais:hover, .botao-comprar:hover{ background: var(--accent-2); }
-
-/* divisor sutil entre imagem e texto (somente na coluna cafés/livros escuros) */
-.coluna-livros .post, .coluna-cafes .post{ border:1px solid var(--border); }
-
-/* ===========================
-   RESPONSIVO
-=========================== */
-@media (max-width: 1080px){
-  .grid-principal{ grid-template-columns:1fr; gap:28px; }
-}
-@media (max-width: 520px){
-  .post .thumb, .card-livro .capa-livro{ height:260px !important; }
-  .post h3{ font-size:1.1rem; }
-}
-/* ===========================
-   CARD HORIZONTAL (thumb esquerda, texto direita)
-=========================== */
-.post {
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  background: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.post:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 22px rgba(0,0,0,0.15);
-}
-
-/* --- imagem vertical à esquerda --- */
-.post .thumb {
-  width: 38%;               /* proporção visual agradável */
-  height: auto;
-  aspect-ratio: 3/4;        /* verticalizado */
-  object-fit: cover;
-  object-position: center;
-  border-right: 1px solid #eee;
-}
-
-/* --- conteúdo à direita --- */
-.post .conteudo {
-  flex: 1;
-  padding: 20px 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.post h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.2rem;
-  margin-bottom: 6px;
-}
-
-.post p {
-  font-family: 'Lora', serif;
-  color: #333;
-  line-height: 1.55;
-  margin-bottom: 10px;
-}
-
-.post .lermais {
-  align-self: flex-start;
-  background-color: #d6b57b;
-  color: #fff;
-  font-weight: 600;
-  text-decoration: none;
-  padding: 8px 14px;
-  border-radius: 6px;
-  transition: background-color 0.2s ease;
-}
-
-.post .lermais:hover {
-  background-color: #b8975d;
-}
-
-/* --- responsividade --- */
-@media (max-width: 780px) {
-  .post {
-    flex-direction: column;
-  }
-  .post .thumb {
-    width: 100%;
-    height: 320px;
-    aspect-ratio: auto;
-    border-right: none;
-    border-bottom: 1px solid #eee;
-  }
-  .post .conteudo {
-    padding: 18px 20px;
-  }
-}
-/* ===========================
-   CARD HORIZONTAL — tons café e dourado
-=========================== */
-.post {
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  background: #f2e6d8;           /* marrom-claro */
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.12);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.post:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 22px rgba(0,0,0,0.18);
-}
-
-/* --- imagem vertical à esquerda --- */
-.post .thumb {
-  width: 38%;
-  aspect-ratio: 3/4;
-  object-fit: cover;
-  object-position: center;
-  border-right: 1px solid rgba(0,0,0,0.08);
-}
-
-/* --- conteúdo à direita --- */
-.post .conteudo {
-  flex: 1;
-  padding: 22px 26px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  color: #3b2b22;
-}
-
-.post h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.25rem;
-  margin-bottom: 8px;
-  color: #3b2b22;
-}
-
-.post p {
-  font-family: 'Lora', serif;
-  font-size: 0.97rem;
-  color: #3b2b22;
-  line-height: 1.55;
-  margin-bottom: 14px;
-}
-
-/* --- botão dourado com fonte marrom --- */
-.post .lermais {
-  align-self: flex-start;
-  background-color: #d6b57b;
-  color: #3b2b22;
-  font-weight: 600;
-  text-decoration: none;
-  padding: 8px 16px;
-  border-radius: 6px;
-  letter-spacing: 0.2px;
-  transition: background-color 0.2s ease, transform 0.1s ease;
-}
-
-.post .lermais:hover {
-  background-color: #b8975d;
-  transform: translateY(-2px);
-}
-
-/* responsivo */
-@media (max-width: 780px) {
-  .post {
-    flex-direction: column;
-  }
-  .post .thumb {
-    width: 100%;
-    height: 320px;
-    border-right: none;
-    border-bottom: 1px solid rgba(0,0,0,0.08);
-  }
-  .post .conteudo {
-    padding: 18px 22px;
-  }
-}
-/* ===========================
-   FUNDO GERAL / GRID WRAPPER
-=========================== */
-
-/* fundo da página */
-body {
-  background-color: #d9cbb8;   /* bege amendoado escuro */
-  color: #3b2b22;
+header p {
+  margin-top: 10px;
+  font-style: italic;
 }
 
-/* seção principal */
+/* --------- GRID INDEX (LIVROS À ESQ., CAFÉS À DIR.) --------- */
 .grid-principal {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   padding: 50px 6%;
-  background-color: #d9cbb8;   /* mesmo tom do body */
+  background: var(--bg-page);
 }
-
-/* colunas (blocos Livros e Cafés) */
 .coluna-livros,
 .coluna-cafes {
-  background-color: #2e241f;   /* marrom café intenso */
-  border-radius: 14px;
-  box-shadow: 0 6px 22px rgba(0,0,0,0.25);
+  background: var(--card);
+  color: var(--card-ink);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
   padding: 28px;
 }
-
-/* títulos das colunas */
 .coluna-livros h2,
 .coluna-cafes h2 {
   font-family: 'Playfair Display', serif;
   font-weight: 600;
   font-size: 1.8rem;
-  color: #f2e6d8;              /* texto claro */
-  margin-bottom: 20px;
-  letter-spacing: 0.3px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  margin: 0 0 20px;
+  color: var(--card-ink);
 }
-
-/* responsivo */
+.grid-livros,
+.grid-cafes {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
 @media (max-width: 980px) {
   .grid-principal {
     grid-template-columns: 1fr;
@@ -1023,188 +102,137 @@ body {
     padding: 40px 5%;
   }
 }
-/* ===========================
-   RODAPÉ — tons café
-=========================== */
-#footer {
-  background-color: #d9cbb8; /* fundo igual ao corpo */
-  text-align: center;
-  padding: 28px 0 40px;
-  font-family: 'Lora', serif;
-  color: #3b2b22;            /* marrom escuro */
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
+
+/* --------- CARD HORIZONTAL (THUMB À ESQUERDA) --------- */
+.post {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  background: #f2e6d8;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.post:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
 }
 
-#footer p {
-  margin: 4px 0;
-  font-size: 0.95rem;
-  color: #3b2b22;            /* mantém marrom escuro */
+/* THUMB VERTICAL */
+.post .thumb {
+  width: 38%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  object-position: center;
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-#footer strong {
+/* CONTEÚDO DO CARD */
+.post .conteudo {
+  flex: 1;
+  padding: 22px 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--ink);
+}
+.post h3 {
   font-family: 'Playfair Display', serif;
-  font-weight: 600;
-  color: #3b2b22;            /* mesmo tom */
+  font-size: 1.25rem;
+  margin: 0 0 8px;
+  color: var(--ink);
 }
-
-#footer em {
-  color: #3b2b22;
-  font-style: italic;
+.post p {
+  font-size: 0.97rem;
+  line-height: 1.55;
+  color: var(--ink);
+  margin: 0 0 14px;
 }
-
-#footer a {
-  color: #3b2b22;
+.post a {
   text-decoration: none;
 }
+.post h3 a {
+  color: var(--ink);
+  border-bottom: 1px solid transparent;
+}
+.post h3 a:hover {
+  border-bottom-color: var(--accent);
+}
 
+/* BOTÕES */
+.post .lermais,
+.botao-comprar {
+  align-self: flex-start;
+  background: var(--accent);
+  color: var(--ink);
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 6px;
+  letter-spacing: 0.2px;
+  transition: background 0.2s, transform 0.1s;
+}
+.post .lermais:hover,
+.botao-comprar:hover {
+  background: var(--accent-2);
+  transform: translateY(-2px);
+}
+
+/* --------- PÁGINAS LIVROS & CAFÉS (DUAS COLUNAS) --------- */
+.page-livros .grid-colecao,
+.page-cafes .grid-colecao {
+  padding: 44px 6%;
+}
+.page-livros .mural-cards,
+.page-cafes .mural-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.page-livros .mural-cards .post,
+.page-cafes .mural-cards .post {
+  background: #f2e6d8;
+}
+.page-livros .mural-cards .post .thumb,
+.page-cafes .mural-cards .post .thumb {
+  width: 40%;
+}
+
+@media (max-width: 900px) {
+  .page-livros .mural-cards,
+  .page-cafes .mural-cards {
+    grid-template-columns: 1fr;
+  }
+  .post {
+    flex-direction: column;
+  }
+  .post .thumb {
+    width: 100%;
+    height: 320px;
+    aspect-ratio: auto;
+    border-right: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+  .post .conteudo {
+    padding: 18px 22px;
+  }
+}
+
+/* --------- RODAPÉ --------- */
+#footer {
+  background: var(--bg-page);
+  color: var(--ink);
+  text-align: center;
+  padding: 28px 0 40px;
+  border-top: 1px solid var(--border);
+}
+#footer a {
+  color: var(--ink);
+  text-decoration: none;
+}
 #footer a:hover {
-  color: #b8975d;            /* dourado suave no hover */
-}
-/* ==============
-   LAYOUT: Páginas Livros & Cafés
-   - duas colunas lado a lado (desktop)
-   - uma coluna no mobile
-   - usa o mesmo card horizontal já criado (thumb esquerda)
-================ */
-
-/* escopo: só livros e cafés */
-.page-livros .grid-colecao,
-.page-cafes .grid-colecao{
-  padding: 44px 6%;
+  color: var(--accent-2);
 }
 
-.page-livros .grid-colecao h2,
-.page-cafes .grid-colecao h2{
-  font-family: 'Playfair Display', serif;
-  font-weight: 600;
-  font-size: 1.9rem;
-  margin: 0 0 18px;
-  color: #3b2b22;
-}
-
-/* mural em colunas */
-.page-livros .mural-cards,
-.page-cafes  .mural-cards{
-  display: grid;
-  grid-template-columns: 1fr 1fr;  /* privilégio ao lado a lado */
-  gap: 24px;
-}
-
-/* garante o card horizontal com thumb vertical à esquerda */
-.page-livros .mural-cards .post,
-.page-cafes  .mural-cards .post{
-  display: flex;
-  background: #f2e6d8;            /* marrom-claro */
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 14px rgba(0,0,0,.12);
-}
-
-.page-livros .mural-cards .post .thumb,
-.page-cafes  .mural-cards .post .thumb{
-  width: 40%;
-  aspect-ratio: 3/4;               /* verticalizado */
-  object-fit: cover;
-  border-right: 1px solid rgba(0,0,0,.08);
-}
-
-.page-livros .mural-cards .post .conteudo,
-.page-cafes  .mural-cards .post .conteudo{
-  flex: 1;
-  padding: 20px 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  color: #3b2b22;
-}
-
-/* responsividade: no mobile vira 1 coluna */
-@media (max-width: 900px){
-  .page-livros .mural-cards,
-  .page-cafes  .mural-cards{
-    grid-template-columns: 1fr;
-  }
-  .page-livros .mural-cards .post .thumb,
-  .page-cafes  .mural-cards .post .thumb{
-    width: 100%;
-    height: 320px;
-    aspect-ratio: auto;
-    border-right: none;
-    border-bottom: 1px solid rgba(0,0,0,.08);
-  }
-}
-/* ==============
-   LAYOUT: Páginas Livros & Cafés
-   - duas colunas lado a lado (desktop)
-   - uma coluna no mobile
-   - usa o mesmo card horizontal já criado (thumb esquerda)
-================ */
-
-/* escopo: só livros e cafés */
-.page-livros .grid-colecao,
-.page-cafes .grid-colecao{
-  padding: 44px 6%;
-}
-
-.page-livros .grid-colecao h2,
-.page-cafes .grid-colecao h2{
-  font-family: 'Playfair Display', serif;
-  font-weight: 600;
-  font-size: 1.9rem;
-  margin: 0 0 18px;
-  color: #3b2b22;
-}
-
-/* mural em colunas */
-.page-livros .mural-cards,
-.page-cafes  .mural-cards{
-  display: grid;
-  grid-template-columns: 1fr 1fr;  /* privilégio ao lado a lado */
-  gap: 24px;
-}
-
-/* garante o card horizontal com thumb vertical à esquerda */
-.page-livros .mural-cards .post,
-.page-cafes  .mural-cards .post{
-  display: flex;
-  background: #f2e6d8;            /* marrom-claro */
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 14px rgba(0,0,0,.12);
-}
-
-.page-livros .mural-cards .post .thumb,
-.page-cafes  .mural-cards .post .thumb{
-  width: 40%;
-  aspect-ratio: 3/4;               /* verticalizado */
-  object-fit: cover;
-  border-right: 1px solid rgba(0,0,0,.08);
-}
-
-.page-livros .mural-cards .post .conteudo,
-.page-cafes  .mural-cards .post .conteudo{
-  flex: 1;
-  padding: 20px 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  color: #3b2b22;
-}
-
-/* responsividade: no mobile vira 1 coluna */
-@media (max-width: 900px){
-  .page-livros .mural-cards,
-  .page-cafes  .mural-cards{
-    grid-template-columns: 1fr;
-  }
-  .page-livros .mural-cards .post .thumb,
-  .page-cafes  .mural-cards .post .thumb{
-    width: 100%;
-    height: 320px;
-    aspect-ratio: auto;
-    border-right: none;
-    border-bottom: 1px solid rgba(0,0,0,.08);
-  }
-}
 
 
