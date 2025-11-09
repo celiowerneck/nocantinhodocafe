@@ -559,5 +559,67 @@ a.botao-comprar:hover {
     font-size: 1.6rem;
   }
 }
+/* --- PADRONIZAÇÃO DE CARDS DE LIVROS E CAFÉS --- */
+.card-livro, .post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-livro:hover, .post:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* --- PADRÃO DE IMAGEM --- */
+.capa-livro, .thumb {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  object-position: center;
+  border-bottom: 1px solid #ddd;
+}
+
+/* --- TEXTO INTERNO --- */
+.texto-card, .conteudo {
+  padding: 16px 18px;
+  text-align: left;
+}
+
+.texto-card h3, .conteudo h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.texto-card p, .conteudo p {
+  font-family: 'Lora', serif;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* --- BOTÃO DE LEITURA --- */
+.botao-comprar, .lermais {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 14px;
+  background-color: #d6b57b;
+  color: #fff;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.botao-comprar:hover, .lermais:hover {
+  background-color: #b8975d;
+}
 
 
