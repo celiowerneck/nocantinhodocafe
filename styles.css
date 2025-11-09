@@ -887,5 +887,91 @@ img.thumb, img.capa-livro{ max-width:100% !important; height:auto; }
     padding: 18px 20px;
   }
 }
+/* ===========================
+   CARD HORIZONTAL — tons café e dourado
+=========================== */
+.post {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  background: #f2e6d8;           /* marrom-claro */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.18);
+}
+
+/* --- imagem vertical à esquerda --- */
+.post .thumb {
+  width: 38%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  object-position: center;
+  border-right: 1px solid rgba(0,0,0,0.08);
+}
+
+/* --- conteúdo à direita --- */
+.post .conteudo {
+  flex: 1;
+  padding: 22px 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #3b2b22;
+}
+
+.post h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+  color: #3b2b22;
+}
+
+.post p {
+  font-family: 'Lora', serif;
+  font-size: 0.97rem;
+  color: #3b2b22;
+  line-height: 1.55;
+  margin-bottom: 14px;
+}
+
+/* --- botão dourado com fonte marrom --- */
+.post .lermais {
+  align-self: flex-start;
+  background-color: #d6b57b;
+  color: #3b2b22;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  letter-spacing: 0.2px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.post .lermais:hover {
+  background-color: #b8975d;
+  transform: translateY(-2px);
+}
+
+/* responsivo */
+@media (max-width: 780px) {
+  .post {
+    flex-direction: column;
+  }
+  .post .thumb {
+    width: 100%;
+    height: 320px;
+    border-right: none;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+  }
+  .post .conteudo {
+    padding: 18px 22px;
+  }
+}
 
 
