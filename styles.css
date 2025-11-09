@@ -621,5 +621,49 @@ a.botao-comprar:hover {
 .botao-comprar:hover, .lermais:hover {
   background-color: #b8975d;
 }
+/* --- GRID PRINCIPAL --- */
+.grid-principal {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 40px 5%;
+  background-color: #faf8f5;
+}
+
+/* --- COLUNAS --- */
+.coluna-livros, .coluna-cafes {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.coluna-livros h2, .coluna-cafes h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #3c2f2f;
+}
+
+/* --- GRID INTERNO DE CARDS --- */
+.grid-livros, .grid-cafes {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 980px) {
+  .grid-principal {
+    grid-template-columns: 1fr;
+  }
+  .coluna-livros, .coluna-cafes {
+    align-items: center;
+  }
+  .grid-livros, .grid-cafes {
+    width: 100%;
+    max-width: 600px;
+  }
+}
 
 
