@@ -11,83 +11,93 @@
 </head>
 
 <body>
-  <!-- Cabeçalho será carregado dinamicamente -->
+  <!-- Cabeçalho dinâmico -->
   <div id="header"></div>
 
-  <main>
-    <!-- BLOG / POSTS PRINCIPAL -->
-    <section id="blog" class="feed-posts">
-      <h2>☕ Últimas Leituras & Cafés</h2>
+  <main class="grid-principal">
+    <!-- Coluna Esquerda — LIVROS -->
+    <section class="coluna-livros">
+      <h2>📚 Livros</h2>
+      <div class="grid-livros">
 
-      <!-- Card 1 -->
-      <article class="post">
-        <img src="IMG/win-bigly.jpg" alt="Capa do livro Win Bigly" class="thumb" loading="lazy">
-        <div class="conteudo">
-          <h3><a href="reviews/win-bigly.html"><em>Win Bigly</em></a> — Scott Adams</h3>
-          <p>Um ensaio provocador sobre persuasão e influência, explorando como as emoções e as narrativas moldam nossas decisões mais do que a lógica.</p>
-          <a href="reviews/win-bigly.html" class="lermais">→ Ler resenha completa</a>
-        </div>
-      </article>
+        <!-- Win Bigly -->
+        <article class="post">
+          <img src="IMG/win-bigly.jpg" alt="Capa do livro Win Bigly" class="thumb" loading="lazy">
+          <div class="conteudo">
+            <h3><a href="reviews/win-bigly.html"><em>Win Bigly</em></a> — Scott Adams</h3>
+            <p>Um ensaio provocador sobre persuasão e influência, explorando como as emoções e as narrativas moldam nossas decisões mais do que a lógica.</p>
+            <a href="reviews/win-bigly.html" class="lermais">→ Ler resenha completa</a>
+          </div>
+        </article>
 
-      <article class="post">
-  <img src="IMG/factfulness.jpg" alt="Capa do livro Factfulness – Hans Rosling" class="thumb" loading="lazy">
-  <div class="conteudo">
-    <h3><a href="reviews/factfulness.html"><em>Factfulness</em></a> — Hans Rosling</h3>
-    <p>Um livro transformador que revela como enxergar o mundo de forma mais realista e otimista, baseando-se em dados em vez de instintos dramáticos.</p>
-    <a href="reviews/factfulness.html" class="lermais">→ Ler resenha completa</a>
-  </div>
-</article>
+        <!-- Factfulness -->
+        <article class="post">
+          <img src="IMG/factfulness.jpg" alt="Capa do livro Factfulness – Hans Rosling" class="thumb" loading="lazy">
+          <div class="conteudo">
+            <h3><a href="reviews/factfulness.html"><em>Factfulness</em></a> — Hans Rosling</h3>
+            <p>Um livro transformador que revela como enxergar o mundo de forma mais realista e otimista, baseando-se em dados em vez de instintos dramáticos.</p>
+            <a href="reviews/factfulness.html" class="lermais">→ Ler resenha completa</a>
+          </div>
+        </article>
 
-      <article class="post">
-  <img src="IMG/antifragil.jpg" alt="Capa do livro Antifrágil – Nassim Nicholas Taleb" class="thumb" loading="lazy">
-  <div class="conteudo">
-    <h3><a href="reviews/antifragil.html"><em>Antifrágil</em></a> — Nassim Nicholas Taleb</h3>
-    <p>Um guia provocador sobre como pessoas, sistemas e ideias podem prosperar em meio à incerteza e ao caos — e não apenas resistir a eles.</p>
-    <a href="reviews/antifragil.html" class="lermais">→ Ler resenha completa</a>
-  </div>
-</article>
+        <!-- Antifrágil -->
+        <article class="post">
+          <img src="IMG/antifragil.jpg" alt="Capa do livro Antifrágil – Nassim Nicholas Taleb" class="thumb" loading="lazy">
+          <div class="conteudo">
+            <h3><a href="reviews/antifragil.html"><em>Antifrágil</em></a> — Nassim Nicholas Taleb</h3>
+            <p>Um guia provocador sobre como pessoas, sistemas e ideias podem prosperar em meio à incerteza e ao caos — e não apenas resistir a eles.</p>
+            <a href="reviews/antifragil.html" class="lermais">→ Ler resenha completa</a>
+          </div>
+        </article>
 
-      <!-- Card 2 -->
-      <article class="post">
-        <img src="IMG/cafe-orfeu-classico.jpg" alt="Café Orfeu Clássico" class="thumb" loading="lazy">
-        <div class="conteudo">
-          <h3><a href="reviews/cafe-orfeu-classico.html">Orfeu Clássico – Torra Média</a></h3>
-          <p>Notas de caramelo, castanha e chocolate ao leite. Doçura equilibrada e aroma convidativo — ideal para leituras lentas.</p>
-         <a href="reviews/cafe-orfeu-classico.html" class="lermais">→ Ver análise sensorial</a>
-        </div>
-      </article>
+      </div>
+    </section>
 
-<article class="post">
-  <img src="IMG/cafe-santa-monica.jpg" alt="Café Santa Mônica – Torra Média" class="thumb" loading="lazy">
-  <div class="conteudo">
-    <h3><a href="reviews/cafe-santa-monica.html">Café Santa Mônica – Torra Média</a></h3>
-    <p>Café 100% arábica de origem paulista, com notas suaves de chocolate e castanha. Corpo equilibrado e final doce, ideal para o dia a dia.</p>
-    <a href="reviews/cafe-santa-monica.html" class="lermais">→ Ver análise sensorial</a>
-  </div>
-</article>
+    <!-- Coluna Direita — CAFÉS -->
+    <section class="coluna-cafes">
+      <h2>☕ Cafés</h2>
+      <div class="grid-cafes">
 
+        <!-- Orfeu -->
+        <article class="post">
+          <img src="IMG/cafe-orfeu-classico.jpg" alt="Café Orfeu Clássico" class="thumb" loading="lazy">
+          <div class="conteudo">
+            <h3><a href="reviews/cafe-orfeu-classico.html">Orfeu Clássico – Torra Média</a></h3>
+            <p>Notas de caramelo, castanha e chocolate ao leite. Doçura equilibrada e aroma convidativo — ideal para leituras lentas.</p>
+            <a href="reviews/cafe-orfeu-classico.html" class="lermais">→ Ver análise sensorial</a>
+          </div>
+        </article>
 
-<article class="post">
-  <img src="IMG/starbucks-colombia.jpg" alt="Café Starbucks Colombia – Torra Média" class="thumb" loading="lazy">
-  <div class="conteudo">
-    <h3><a href="reviews/starbucks-colombia.html">Starbucks Colombia – Torra Média</a></h3>
-    <p>Café colombiano 100% arábica, com notas de nozes e caramelo leve. Corpo equilibrado e aroma marcante — clássico e confiável.</p>
-    <a href="https://www.amazon.com.br/Cafés-Starbucks-Colombia-Moído-250g/dp/B082TKHHW2/ref=sr_1_13?__mk_pt_BR=ÅMÅŽÕÑ&crid=1B2USTQS7VEDK&dib=eyJ2IjoiMSJ9.QhxMBRvdrDokeeLPbxoOyYZ__-NRuLtlhF9apZ22N8zC-iBcMejoQ_q41n036KGgal0oqIwFccet8GTI_Dku4DWCkITDOSR6rPJ5hF161VkXnsUAfWv4_izocgb2hddFjX2VVG14QJghxVUJq8kufMWbk9LPNbIvgQQ5LQUZ6zxI6-DXjrD1RgREpARSIr6UYQ4Tw6mZP0Td7V35ekf2Bo7ICjjCiuCYOclmycpWd_-S8UsLLMJPHZiklzVUSOGYzS4Tc1-gaB5bSBebeI6vxUFdGilJHQS3i2FmMU0MqBI.5bxU_fyrGKLqqw8ChC_FLjkROTdnwat1ouAlij1uLhU&dib_tag=se&keywords=cafe+colombia&qid=1762647567&sprefix=cafe+colombia%2Caps%2C235&sr=8-13" 
-       target="_blank" 
-       class="lermais">→ Ver análise sensorial</a>
-  </div>
-</article>
+        <!-- Santa Mônica -->
+        <article class="post">
+          <img src="IMG/cafe-santa-monica.jpg" alt="Café Santa Mônica – Torra Média" class="thumb" loading="lazy">
+          <div class="conteudo">
+            <h3><a href="reviews/cafe-santa-monica.html">Café Santa Mônica – Torra Média</a></h3>
+            <p>Café 100% arábica de origem paulista, com notas suaves de chocolate e castanha. Corpo equilibrado e final doce, ideal para o dia a dia.</p>
+            <a href="reviews/cafe-santa-monica.html" class="lermais">→ Ver análise sensorial</a>
+          </div>
+        </article>
 
-      
+        <!-- Starbucks Colombia -->
+        <article class="post">
+          <img src="IMG/starbucks-colombia.jpg" alt="Café Starbucks Colombia – Torra Média" class="thumb" loading="lazy">
+          <div class="conteudo">
+            <h3><a href="reviews/starbucks-colombia.html">Starbucks Colombia – Torra Média</a></h3>
+            <p>Café colombiano 100% arábica, com notas de nozes e caramelo leve. Corpo equilibrado e aroma marcante — clássico e confiável.</p>
+            <a href="https://www.amazon.com.br/Cafés-Starbucks-Colombia-Moído-250g/dp/B082TKHHW2/ref=sr_1_13?__mk_pt_BR=ÅMÅŽÕÑ&crid=1B2USTQS7VEDK&dib=eyJ2IjoiMSJ9.QhxMBRvdrDokeeLPbxoOyYZ__-NRuLtlhF9apZ22N8zC-iBcMejoQ_q41n036KGgal0oqIwFccet8GTI_Dku4DWCkITDOSR6rPJ5hF161VkXnsUAfWv4_izocgb2hddFjX2VVG14QJghxVUJq8kufMWbk9LPNbIvgQQ5LQUZ6zxI6-DXjrD1RgREpARSIr6UYQ4Tw6mZP0Td7V35ekf2Bo7ICjjCiuCYOclmycpWd_-S8UsLLMJPHZiklzVUSOGYzS4Tc1-gaB5bSBebeI6vxUFdGilJHQS3i2FmMU0MqBI.5bxU_fyrGKLqqw8ChC_FLjkROTdnwat1ouAlij1uLhU&dib_tag=se&keywords=cafe+colombia&qid=1762647567&sprefix=cafe+colombia%2Caps%2C235&sr=8-13" 
+               target="_blank" 
+               class="lermais">→ Ver análise sensorial</a>
+          </div>
+        </article>
 
+      </div>
     </section>
   </main>
 
-  <!-- Rodapé será carregado dinamicamente -->
+  <!-- Rodapé dinâmico -->
   <div id="footer"></div>
 </body>
 </html>
-
 
 
 
