@@ -54,5 +54,26 @@
     "imagem": "IMG/cafe-cerrado-mineiro.jpg",
     "link": "reviews/cafe-cerrado-mineiro.html",
     "categoria": "Café"
-  }
+  },
+  {
+  "titulo": "Antifrágil – Coisas que se beneficiam com o caos",
+  "autor": "Nassim Nicholas Taleb",
+  "descricao": "Um guia provocador sobre como pessoas, sistemas e ideias podem prosperar em meio à incerteza e ao caos — e não apenas resistir a eles.",
+  "imagem": "IMG/antifragil.jpg",
+  "link": "reviews/antifragil.html",
+  "categoria": "Livro"
+},
+  {
+  "titulo": "Starbucks Colombia – Torra Média",
+  "autor": "Starbucks Coffee Company",
+  "descricao": "Café colombiano 100% arábica, equilibrado e aromático, com notas de nozes e caramelo leve. Ideal para espresso e métodos filtrados.",
+  "imagem": "IMG/starbucks-colombia.jpg",
+  "link": "reviews/starbucks-colombia.html",
+  "categoria": "Café"
+}
+
+
+
+
+  
 ]
