@@ -348,3 +348,76 @@ nav a:hover {
 }
 
 /* Botão já aproveita o estilo existente em .botao-comprar */
+
+/* --------- PÁGINA DE RESENHA DE LIVRO --------- */
+
+.page-review {
+  max-width: 1100px;
+  margin: 0 auto 60px;
+  padding: 40px 6% 60px;
+}
+
+/* Card com capa + informações básicas */
+.review-top {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  background: #f2e6d8;
+  border-radius: 18px;
+  padding: 24px 26px;
+  box-shadow: var(--shadow);
+  margin-top: 20px;
+}
+
+.review-cover {
+  width: 210px;
+  height: 310px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.review-info h1 {
+  margin: 0 0 12px;
+  font-size: 1.8rem;
+  font-family: 'Playfair Display', serif;
+  color: var(--ink);
+}
+
+.review-info p {
+  margin: 0 0 6px;
+  line-height: 1.5;
+}
+
+/* Card com o texto da resenha */
+.review-body {
+  margin-top: 24px;
+  background: #f2e6d8;
+  border-radius: 18px;
+  padding: 24px 26px;
+  box-shadow: var(--shadow);
+  line-height: 1.7;
+}
+
+.review-body p {
+  margin: 0 0 14px;
+}
+
+/* Responsivo: empilha capa + info no mobile */
+@media (max-width: 900px) {
+  .review-top {
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+  }
+
+  .review-cover {
+    width: 180px;
+    height: 250px;
+  }
+
+  .page-review {
+    padding: 32px 5% 50px;
+  }
+}
+
