@@ -270,11 +270,12 @@ nav a:hover {
 }
 
 .card img {
-  width: 180px;
-  height: 260px;
-  object-fit: cover;
-  border-radius: 8px;
+  width: 220px;
+  height: 220px;
+  object-fit: contain;  /* mantém a embalagem sem cortar */
+  padding: 10px;        /* adiciona respiro visual */
 }
+
 
 
 
