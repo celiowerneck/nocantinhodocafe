@@ -349,16 +349,16 @@ nav a:hover {
 
 /* Botão já aproveita o estilo existente em .botao-comprar */
 
-/* --------- PÁGINA DE RESENHA DE LIVRO --------- */
+/* --------- PÁGINA: RESENHA ÚNICA DE LIVRO --------- */
 
-.page-review {
+.resenha-unica {
   max-width: 1100px;
   margin: 0 auto 60px;
   padding: 40px 6% 60px;
 }
 
-/* Card com capa + informações básicas */
-.review-top {
+/* Card com capa + dados do livro */
+.bloco-livro {
   display: flex;
   gap: 24px;
   align-items: flex-start;
@@ -369,7 +369,8 @@ nav a:hover {
   margin-top: 20px;
 }
 
-.review-cover {
+/* Capa maior na resenha */
+.resenha-unica .capa-livro {
   width: 210px;
   height: 310px;
   object-fit: cover;
@@ -377,20 +378,25 @@ nav a:hover {
   flex-shrink: 0;
 }
 
-.review-info h1 {
+.dados-livro h2 {
   margin: 0 0 12px;
   font-size: 1.8rem;
   font-family: 'Playfair Display', serif;
   color: var(--ink);
 }
 
-.review-info p {
+.dados-livro p {
   margin: 0 0 6px;
   line-height: 1.5;
 }
 
-/* Card com o texto da resenha */
-.review-body {
+/* Botão “Comprar livro” dentro da resenha */
+.dados-livro .botao-comprar {
+  margin-top: 12px;
+}
+
+/* Bloco com o texto da resenha */
+.texto-resenha {
   margin-top: 24px;
   background: #f2e6d8;
   border-radius: 18px;
@@ -399,25 +405,38 @@ nav a:hover {
   line-height: 1.7;
 }
 
-.review-body p {
+.texto-resenha h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+}
+
+.texto-resenha p {
   margin: 0 0 14px;
 }
 
-/* Responsivo: empilha capa + info no mobile */
+/* Citação destacada */
+.texto-resenha blockquote {
+  margin: 12px 0 18px;
+  padding-left: 16px;
+  border-left: 3px solid var(--accent);
+  font-style: italic;
+}
+
+/* Responsivo: empilha capa + texto no mobile */
 @media (max-width: 900px) {
-  .review-top {
+  .bloco-livro {
     flex-direction: column;
     align-items: center;
     text-align: left;
   }
 
-  .review-cover {
+  .resenha-unica .capa-livro {
     width: 180px;
-    height: 250px;
+    height: 260px;
   }
 
-  .page-review {
+  .resenha-unica {
     padding: 32px 5% 50px;
   }
 }
-
