@@ -233,6 +233,48 @@ header p {
 #footer a:hover {
   color: var(--accent-2);
 }
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 20px;
+  font-size: 1.15rem;
+  font-family: 'Lora', serif;
+}
+
+nav a {
+  color: #E8DCC3;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+nav a:hover {
+  color: #D9A744;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 30px 20px;
+}
+
+.card {
+  background: #2d241e;
+  border-radius: 18px;
+  padding: 28px;
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.card img {
+  width: 180px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 8px;
+}
 
 
 
