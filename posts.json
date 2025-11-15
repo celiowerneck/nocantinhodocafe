@@ -70,9 +70,39 @@
   "imagem": "IMG/starbucks-colombia.jpg",
   "link": "reviews/starbucks-colombia.html",
   "categoria": "Café"
+},
+  {
+  "titulo": "O Homem Mais Rico da Babilônia",
+  "autor": "George S. Clason",
+  "descricao": "O clássico sobre finanças pessoais que ensina princípios atemporais de disciplina, poupança e construção de riqueza.",
+  "imagem": "IMG/o-homem-mais-rico-da-babilonia.jpg",
+  "link": "reviews/o-homem-mais-rico-da-babilonia.html",
+  "categoria": "Livro"
+},
+  {
+  "titulo": "12 Regras para a Vida",
+  "autor": "Jordan B. Peterson",
+  "descricao": "Um guia direto e profundo sobre ordem, responsabilidade e propósito, oferecendo doze princípios para uma vida mais consciente.",
+  "imagem": "IMG/12-regras-para-a-vida.jpg",
+  "link": "reviews/12-regras-para-a-vida.html",
+  "categoria": "Livro"
+},
+  {
+  "titulo": "Arriscando a Própria Pele",
+  "autor": "Nassim Nicholas Taleb",
+  "descricao": "Taleb explora por que assumir riscos reais é essencial para decisões sábias e para a integridade em qualquer campo.",
+  "imagem": "IMG/arriscando-a-propria-pele.jpg",
+  "link": "reviews/arriscando-a-propria-pele.html",
+  "categoria": "Livro"
+},
+  {
+  "titulo": "A Lógica do Cisne Negro",
+  "autor": "Nassim Nicholas Taleb",
+  "descricao": "Uma análise poderosa sobre eventos imprevisíveis de grande impacto e como eles moldam o mundo de maneiras que não conseguimos antecipar.",
+  "imagem": "IMG/a-logica-do-cisne-negro.jpg",
+  "link": "reviews/a-logica-do-cisne-negro.html",
+  "categoria": "Livro"
 }
-
-
 
 
   
