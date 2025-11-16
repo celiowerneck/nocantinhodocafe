@@ -440,10 +440,24 @@ nav a:hover {
     padding: 32px 5% 50px;
   }
 }
+/* === NORMALIZAÇÃO DOS CARDS DE LIVROS === */
+.card-livro {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+/* Garante que TODAS as capas fiquem com o MESMO tamanho */
 .card-livro .capa-livro {
-  width: 160px;        /* ajuste fino usado nos primeiros cards */
-  height: auto;
+  width: 150px;        /* ajuste fino – pode colocar 160 se preferir maior */
+  height: 220px;       /* altura fixa para padronizar */
+  object-fit: cover;   /* corta o excesso sem distorcer */
   border-radius: 8px;
-  object-fit: cover;
+  display: block;
   flex-shrink: 0;
+}
+
+/* Texto não “empurra” a altura do card sem necessidade */
+.card-livro .texto-card {
+  flex: 1;
 }
