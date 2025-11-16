@@ -102,7 +102,48 @@
   "imagem": "IMG/a-logica-do-cisne-negro.jpg",
   "link": "reviews/a-logica-do-cisne-negro.html",
   "categoria": "Livro"
+},
+  {
+  "titulo": "Orfeu Clássico – Grãos 250g",
+  "autor": "Orfeu Cafés Especiais",
+  "descricao": "Café especial 100% arábica, torra média equilibrada, com notas de caramelo, chocolate e leve frutado. Um dos cafés mais populares entre iniciantes e apreciadores.",
+  "imagem": "IMG/orfeu-classico-graos-250g.jpg",
+  "link": "reviews/orfeu-classico-graos-250g.html",
+  "categoria": "Café"
+},
+  {
+  "titulo": "Realcafé Reserva 650 – Grãos 250g",
+  "autor": "Realcafé Reserva",
+  "descricao": "Café especial de torra média, encorpado e equilibrado, com perfil mais intenso e adocicado. Ótima opção de custo-benefício para espresso.",
+  "imagem": "IMG/realcafe-reserva-650-graos-250g.jpg",
+  "link": "reviews/realcafe-reserva-650-graos-250g.html",
+  "categoria": "Café"
+},
+  {
+  "titulo": "Coffee Mais Solos Vulcânicos – Grãos 250g",
+  "autor": "Coffee Mais",
+  "descricao": "Café especial acima de 84 pontos, 100% arábica, com notas de frutas amarelas, caramelo e chocolate. Queridinho dos métodos filtrados.",
+  "imagem": "IMG/coffee-mais-solos-vulcanicos-graos-250g.jpg",
+  "link": "reviews/coffee-mais-solos-vulcanicos-graos-250g.html",
+  "categoria": "Café"
+},
+  {
+  "titulo": "Illy Arabica Selection Brasile – Grãos 250g",
+  "autor": "Illy Caffè",
+  "descricao": "Café de origem única do Cerrado Mineiro, com torra média e notas de caramelo, frutas secas e finalização suave. Ideal para quem quer consistência premium.",
+  "imagem": "IMG/illy-brasile-cerrado-mineiro-graos-250g.jpg",
+  "link": "reviews/illy-brasile-cerrado-mineiro-graos-250g.html",
+  "categoria": "Café"
+},
+  {
+  "titulo": "Native One Orgânico Especial – Grãos 250g",
+  "autor": "Native Organic Coffee",
+  "descricao": "Café orgânico certificado, 100% arábica, com sabor limpo e equilibrado. Boa escolha para quem busca sustentabilidade sem abrir mão de qualidade.",
+  "imagem": "IMG/native-one-organico-especial-cerrado-graos-250g.jpg",
+  "link": "reviews/native-one-organico-especial-cerrado-graos-250g.html",
+  "categoria": "Café"
 }
+
 
 
   
