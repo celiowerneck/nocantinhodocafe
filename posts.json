@@ -142,7 +142,16 @@
   "imagem": "IMG/divina-comedia.jpg",
   "link": "reviews/divina-comedia.html",
   "categoria": "Livro"
+},
+  {
+  "titulo": "O Médico e o Monstro",
+  "autor": "Robert Louis Stevenson",
+  "descricao": "Um clássico da literatura gótica que explora a dualidade humana, ciência, moralidade e o lado sombrio que todos carregamos dentro de nós.",
+  "imagem": "IMG/o-medico-e-o-monstro.jpg",
+  "link": "reviews/o-medico-e-o-monstro.html",
+  "categoria": "Livro"
 }
+
 
 
 
