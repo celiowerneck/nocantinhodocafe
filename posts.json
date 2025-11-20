@@ -134,7 +134,16 @@
   "imagem": "IMG/native-one-organico-especial-cerrado-graos-250g.jpg",
   "link": "reviews/native-one-organico-especial-cerrado-graos-250g.html",
   "categoria": "Café"
+},
+  {
+  "titulo": "A Divina Comédia",
+  "autor": "Dante Alighieri",
+  "descricao": "A obra-prima épica de Dante que atravessa Inferno, Purgatório e Paraíso, unindo poesia, filosofia e espiritualidade em uma das jornadas literárias mais influentes da história.",
+  "imagem": "IMG/divina-comedia.jpg",
+  "link": "reviews/divina-comedia.html",
+  "categoria": "Livro"
 }
+
 
 
 
