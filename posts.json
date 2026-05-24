@@ -150,6 +150,30 @@
   "imagem": "IMG/o-medico-e-o-monstro.jpg",
   "link": "reviews/o-medico-e-o-monstro.html",
   "categoria": "Livro"
+},
+  {
+  "titulo": "O Alienista",
+  "autor": "Machado de Assis",
+  "descricao": "Quem tem o direito de definir quem é louco? Em Itaguaí, é o doutor Bacamarte — até o momento em que se enjaula na própria Casa Verde. Uma sátira que parece escrita ontem.",
+  "imagem": "IMG/o-alienista.jpg",
+  "link": "reviews/o-alienista.html",
+  "categoria": "Livro"
+},
+  {
+  "titulo": "Noites Brancas",
+  "autor": "Fiódor Dostoiévski",
+  "descricao": "Quatro noites, uma cidade fria e um protagonista que vive no mundo da lua. Dostoiévski infla a esperança de um final feliz para então destruí-la — e o gosto amargo fica.",
+  "imagem": "IMG/noites-brancas.jpg",
+  "link": "reviews/noites-brancas.html",
+  "categoria": "Livro"
+},
+  {
+  "titulo": "Saboroso Cadáver",
+  "autor": "Agustina Bazterrica",
+  "descricao": "E se o canibalismo se tornasse institucional — e todos soubessem? Uma distopia gráfica e perturbadora que faz perguntas que você não vai querer responder.",
+  "imagem": "IMG/saboroso-cadaver.jpg",
+  "link": "reviews/saboroso-cadaver.html",
+  "categoria": "Livro"
 }
 
 
